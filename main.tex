@@ -1,13 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  My documentation report
-%  Objective: Explain what I did and how, in order to help someone continue with the investigation
 %
 % Important note:
 % Chapter heading images should have a 2:1 width:height ratio,
 % e.g. 920px width and 460px height.
 %
-% The images can be found anywhere, usually on sky surveys websites or the
-% Astronomy Picture of the day archive http://apod.nasa.gov/apod/archivepix.html
 %
 % The original template (the Legrand Orange Book Template) can be found here --> http://www.latextemplates.com/template/the-legrand-orange-book
 %
@@ -58,7 +54,7 @@
 \end{tabularx}} % Define a template for the note box
 
 \begin{document}
-\title{Building Products with ESP32}
+\title{Building Products with ESP32 fast}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -66,12 +62,12 @@
 
 \begingroup
 \thispagestyle{empty}
-\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble}}} % Image background
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=0.6]{esahubble}}} % Image background
 \centering
 \vspace*{5cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-\textbf{Building Products with ESP32}\\
-{\LARGE ESP-Bootstrap: From concept to production}\par % Book title
+\textbf{Building Products with ESP32 \textit{fast}}\\
+{\LARGE Jumpstart: From concept to production}\par % Book title
 \vspace*{1cm}
 {\Huge John Galt}\par % Author name
 \endgroup
@@ -88,7 +84,7 @@
 
 \noindent \textsc{For Espressif Systems}
 
-\noindent \textsc{github.com/mahavirj/esp-bootstrap} % URL
+\noindent \textsc{github.com/mahavirj/esp-jumpstart} % URL
 
 \noindent This work is the culmination of years of learning in the IoT product development across a wide team of engineers at Espressif. The content started off as official training material. Given the success of the trainings in getting products off the ground, the material has subsequently been converted to this format. Feel free to make copies and share. % License information
 
@@ -98,7 +94,7 @@
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\chapterimage{head1.png} % Table of contents heading image
+\chapterimage{band1.jpg} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
@@ -112,22 +108,22 @@
 %	CHAPTER 1
 %----------------------------------------------------------------------------------------
 
-\chapterimage{head2.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
 \chapter{Introduction}
 
-\section{ESP-Bootstrap: Build ESP32 Products Fast}\index{ESP32: Build ESP32 Products Fast}
+\section{ESP-Jumpstart: Build ESP32 Products Fast}\index{ESP32: Build ESP32 Products Fast}
 
-ESP-Bootstrap is focused on building 'products' on ESP32. It is a quick-way to get started into your product development process. ESP-Bootstrap builds a fully functional, ready to deploy "Smart Power Outlet" in a sequence of incremental steps. Each step addresses either a user-workflow or a developer workflow.
+ESP-Jumpstart is focused on building 'products' on ESP32. It is a quick-way to get started into your product development process. ESP-Jumpstart builds a fully functional, ready to deploy "Smart Power Outlet" in a sequence of incremental steps. Each step addresses either a user-workflow or a developer workflow.
 
-And best of all, you need not be an IoT or ESP expert for using ESP-Bootstrap. All you need is:
+And best of all, you need not be an IoT or ESP expert for using ESP-Jumpstart. All you need is:
 
 \begin{itemize}
 \item An ESP32 development kit: ESP32-DevitKit-C (Available on DigiKey, Mouser, Amazon)
 \item A Development setup (\url{https://docs.espressif.com/projects/esp-idf/en/latest/get-started/})
 \end{itemize}
 
-Once you have ESP-Bootstrap functional, adapting it is simply a matter of replacing the power-outlet's device driver, with your device driver (bulb, washing machine).
+Once you have ESP-Jumpstart functional, adapting it is simply a matter of replacing the power-outlet's device driver, with your device driver (bulb, washing machine).
 
 \section{Hardware Overview}\index{Hardware Overview}
 XXX
@@ -138,7 +134,7 @@ XXX
 %----------------------------------------------------------------------------------------
 %	CHAPTER 2
 %----------------------------------------------------------------------------------------
-\chapterimage{band1.png}
+\chapterimage{band1.jpg}
 
 \chapter{Getting Started}
 
@@ -156,18 +152,18 @@ The following diagram depicts the typical developer setup for development with E
 
 The PC, or the Development Host can be any of Linux, Windows or Mac. The ESP32 based development board is connected to the Development Host over a USB cable. The Development Host has the ESP-IDF (Espressif's SDK), the compiler toolchain and the code for your project. The development host builds this code and generates the executable firmware image. The tools on the Development Host then download the generated firmware image on to the development board. As the firmware executes on the development board, the logs from the firmware can be monitored from the Development Host.
 
-\section{Getting ESP-Bootstrap}\index{Getting ESP-Bootstrap}
+\section{Getting ESP-Jumpstart}\index{Getting ESP-Jumpstart}
 
-Let's get started by cloning the ESP-Bootstrap git repositories \url{https://github.com/mahavirj/esp-bootstrap}. This repository contains the sequence of applications that we will use for this exercise. This repository also contains a stable release version of IDF as a git submodule. This ensures that we are working off of a stable release of IDF.
+Let's get started by cloning the ESP-Jumpstart git repositories \url{https://github.com/mahavirj/esp-jumpstart}. This repository contains the sequence of applications that we will use for this exercise. This repository also contains a stable release version of IDF as a git submodule. This ensures that we are working off of a stable release of IDF.
 
 \begin{verbatim}
-$ git clone --recursive https://github.com/mahavirj/esp-bootstrap
+$ git clone --recursive https://github.com/mahavirj/esp-jumpstart
 \end{verbatim}
 
 This repository already contains a copy of the IDF, Espressif's IoT Development Framework. Let's define the IDF\_PATH variable to point to the correction location of IDF. This can be done by executing the following command in your console:
 
 \begin{verbatim}
-$ export IDF_PATH=/path/to/esp-bootstrap/esp-idf
+$ export IDF_PATH=/path/to/esp-jumpstart/esp-idf
 \end{verbatim}
 
 Now let's make sure your development host (Windows, Linux or Mac) has the required packages to build and monitor ESP32 based projects. What you specifically need to do is:
@@ -219,7 +215,7 @@ Typically, there is a feature v/s footprint tradeoff, where pulling in a new fea
 Let us now first use the \textit{Hello World} application and launch the SDK configuration for this application.
 
 \begin{verbatim}
-$ cd esp-bootstrap/1hello_world
+$ cd esp-jumpstart/1hello_world
 $ make -j8 menuconfig
 \end{verbatim}
 
@@ -283,16 +279,16 @@ Let's now build a simple power outlet with ESP32.
 %	CHAPTER 3
 %----------------------------------------------------------------------------------------
 
-\chapterimage{head2.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
-\chapter{The Outlet}
+\chapter{The Outlet} \label{the-outlet}
 
 In this Chapter we will create a basic power outlet using the driver APIs of the ESP32. The power outlet will do the following:
 \begin{itemize}
     \item Provide a button that the user can press
     \item Toggle an output GPIO on every button press
 \end{itemize}
-For the scope of this chapter, we won't worry about 'connectivity' of this power outlet. That will follow in subsequent chapters. Here we will only focus in implementing the outlet functionality. You may refer to the \textit{2outlet/} directory of esp-bootstrap for looking at this code. 
+For the scope of this chapter, we won't worry about 'connectivity' of this power outlet. That will follow in subsequent chapters. Here we will only focus in implementing the outlet functionality. You may refer to the \textit{2outlet/} directory of esp-jumpstart for looking at this code. 
 
 The code for the driver has been neatly isolated in the file \textit{app\_driver.c}. This way, later whenever you have to modify this application to adapt to your product, you could simply change the contents of this file to talk to your peripheral.
 
@@ -301,7 +297,7 @@ Let's first create a push-button. The Devkit-C development board has a button ca
 
 \ksnotebox{If you are developing with a different development board, please use the appropriate GPIO number for the button that this board may have.}
 
-\subsection{The Code}\index{The Code}
+\subsection{The Code}\index{The Code}\label{sec:push_button}
 The code for enabling this is shown as below:
 \begin{minted}{c}
 #include <iot_button.h>
@@ -337,7 +333,7 @@ Finally, we call the function \textit{app\_driver\_toggle\_state()} which is res
 \section{The Output}\index{The Output}
 Now we will configure a GPIO to act as the output of the power outlet. We will assert this GPIO on or off which would ideally trigger a relay to switch the output on or off.
 
-\subsection{The Code}\index{The Code}
+\subsection{The Code}\index{The Code}\label{sec:relay}
 First off we initialize the GPIO with the correct configuration as shown below:
 
 \begin{minted}{c}
@@ -370,10 +366,10 @@ As our next step, let's add Wi-Fi connectivity to this firmware.
 %	CHAPTER 4
 %----------------------------------------------------------------------------------------
 
-\chapterimage{band1.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
 \chapter{Connecting to Wi-Fi}
-Let's now get this power outlet on a Wi-Fi network. In this Chapter we will connect to a hard-coded Wi-Fi network that is embedded within the device's firmware executable image. You may refer to the \textit{3wifi\_connection/} directory of esp-bootstrap for looking at this code.
+Let's now get this power outlet on a Wi-Fi network. In this Chapter we will connect to a hard-coded Wi-Fi network that is embedded within the device's firmware executable image. You may refer to the \textit{3wifi\_connection/} directory of esp-jumpstart for looking at this code.
 
 Wi-Fi is a protocol that can generate asynchronous events like connectivity lost, connection established, DHCP Address received etc. For this, we register a handler with the Wi-Fi and network subsystem. This handler will get called whenever either of these asynchronous events occurs.
 
@@ -443,12 +439,12 @@ One problem with this approach is that the Wi-Fi settings are hard-coded into th
 %	CHAPTER 5
 %----------------------------------------------------------------------------------------
 
-\chapterimage{head2.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
 \chapter{Network Configuration}
 
 In this step we will build a firmware such that the end-user can configure her Wi-Fi network's credentials into the device at run-time. Since a user's network credentials will be stored persistently on the device, we will also provide a \textit{Reset to Factory} action where a user's configurations can be erased from the device.
-You may refer to the \textit{4network\_config/} directory of esp-bootstrap for looking at this code.
+You may refer to the \textit{4network\_config/} directory of esp-jumpstart for looking at this code.
 
 In the previous example, we had hard-coded the Wi-Fi credentials into the firmware. This obviously doesn't work for a end-user product.
 
@@ -495,38 +491,332 @@ One side-effect, though, of using the BLE based network configuration is that it
 \subsection{Smart-Config}\index{Smart-Config}
 XXX
 
-\section{Network Configuration with ESP}\index{Network Configuration with ESP}
+\section{Demo}\index{Demo}
+Before getting into the details of the network configuration workflow, let us get a feel for how an end-user will configure the network using the provided application.
+You may refer to the \textit{4network\_config/} directory of esp-jumpstart for trying this out.
 
-Espressif provides a \textbf{Unified Provisioning} module for assisting you with your network configuration. The following components are offered:
+\begin{itemize}
+    \item Go to the \textit{4network\_config} application.
+    \item Build, flash and load the application.
+    \item By default, the firmware is launched in BLE mode.
+    \item Install the companion phone application for network configuration from this location: \url{https://github.com/espressif/esp-idf-provisioning-android/releases}. Please install the latest app with \textbf{sec1-ble} as part of its name.
+    \item Launch the application and follow the wizard as shown in the images below.
+\end{itemize}
+
+\ksnotebox{As of now, only Android users can try the application out. For iOS users, we are working on enabling an application with \textit{TestFlight} soon.}
+
+XXX add network configuration images
+
+\begin{itemize}
+    \item If all goes well, your device would be connected to your Home Wi-Fi network.
+    \item If you now reset the device, it will not enter the network-configuration mode. Instead it will go and connect to the Wi-Fi network that is configured.
+\end{itemize}
+
+ 
+\section{Unified Provisioning}\index{Unified Provisioning}
+
+Espressif provides a \textbf{Unified Provisioning} module for assisting you with your network configuration. When this module is invoked from your firmware executable, the module takes care of managing all the state transitions (like starting/stopping the softAP/BLE interface, exchanging the credentials securely, storing them for subsequent use etc).
+
+\begin{itemize}
+
+\item Extensible Protocol: The protocol is completely flexible and it offers the ability for the developers to send custom configuration in the provisioning process. The data representation too is left to the application to decide.
+\item Transport Flexibility: The protocol can work on Wi-Fi (SoftAP + HTTP server) or on BLE as a transport protocol. The framework provides an ability to add support for any other transport easily as long as command-response behaviour can be supported on the transport.
+\item Security Scheme Flexibility: It’s understood that each use-case may require different security scheme to secure the data that is exchanged in the provisioning process. Some applications may work with SoftAP that’s WPA2 protected or BLE with “just-works” security. Or the applications may consider the transport to be insecure and may want application level security. The unified provisioning framework allows application to choose the security as deemed suitable.
+\item Compact Data Representation: The protocol uses Google Protobufs as a data representation for session setup and Wi-Fi provisioning. They provide a compact data representation and ability to parse the data in multiple programming languages in native format. Please note that this data representation is not forced on application specific data and the developers may choose the representation of their choice.
+
+\end{itemize}
+
+\ksnotebox{More details about Unified provisioning are available at: \url{https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/provisioning/provisioning.html}}
+
+The following components are offered:
 \begin{itemize}
     \item \textbf{Unified Provisioning Specification:} A specification to \textit{securely} transfer Wi-Fi credentials to the device, independent of the transport (SoftAP, BLE)
     \item \textbf{IDF Components:} Software modules that implement this specification in the device firmware, available through ESP-IDF
     \item \textbf{Phone Libraries:} Reference implementations on iOS and Android are available that can be directly incorporated into your existing phone applications
-    \item \textbf{Reference Phone Applications:} Fully functional Phone applications on Android and iOS are available for testing during your development, or for skinning with your brand's elements.
+    \item \textbf{Reference Phone Applications:} Fully functional Phone applications on Android (\url{https://github.com/espressif/esp-idf-provisioning-android}) and iOS (\url{https://github.com/espressif/esp-idf-provisioning-ios}) are available for testing during your development, or for skinning with your brand's elements.
 \end{itemize}
+
+\subsection{The Code}\index{The Code}\label{sec:unified_prov}
+The code for invoking the unified provisioning through your firmware is shown below:
+\begin{minted}{c}
+
+if (conn_mgr_prov_is_provisioned(&provisioned) != ESP_OK) {
+    return;
+}
+
+if (! provisioned) {
+    /* Starting unified provisioning */
+    conn_mgr_prov_start_provisioning(prov_type,
+               security, pop, service_name, service_key);
+} else {
+    /* Start the station */
+    wifi_init_sta();
+}
+\end{minted}
+
+The \textit{conn\_mgr\_prov} component provides a wrapper over the unified provisioning interface. Some notes about the code above:
+\begin{itemize}
+    \item The \textit{conn\_mgr\_prov\_is\_provisionined()} API checks whether Wi-Fi network credentials have already been configured or not. These are typically stored in a flash partition called the \textit{NVS}. More about NVS later in this Chapter.
+    \item If no Wi-Fi network credentials are available, the firmware launches the unified provisioning using the call \textit{conn\_mgr\_prov\_start\_provisioning()}. This API will take care of everything, specifically:
+    \begin{enumerate}
+        \item It will start the SoftAP or BLE transport as configured
+        \item It will enable the necessary advertisements using the Wi-Fi or BLE standards
+        \item It will \textit{securely} accept any network credentials from a phone application
+        \item It will store these credentials, for future use, in the NVS
+        \item Finally, it will deinitialise any components (SoftAP, BLE, HTTP Server etc) that were required by the unified provisioning mechanism. This ensures that this point onward there is almost no memory overhead from the unified provisioning module.
+    \end{enumerate}
+    \item If a Wi-Fi network configuration was found in NVS, we directly start the Wi-Fi station interface using \textit{wifi\_init\_sta()}.
+\end{itemize}
+
+These steps ensure that the firmware launches the unified provisioning module when no configuration is found, and if a configuration is available, then starts the Wi-Fi station interface.
+
+Additionally, the unified provisioning module also needs to know the state transitions of the Wi-Fi interface. Hence an additional call needs to be made from the event handler for taking care of this:
+\begin{minted}{c}
+esp_err_t event_handler(void *ctx, system_event_t *event)
+{
+     conn_mgr_prov_event_handler(ctx, event);
+   
+     switch(event->event_id) {
+     case SYSTEM_EVENT_STA_START:
+...
+...
+...
+\end{minted}
+
+\subsubsection{Configurable Options}\index{Configurable Options}
+In the code above, we have used the following call for invoking the unified provisioning interface:
+\begin{minted}{c}
+    /* Starting unified provisioning */
+    conn_mgr_prov_start_provisioning(prov_type,
+               security, pop, service_name, service_key);
+\end{minted}
+
+Let us now look at the parameters, or the configuration options of this API:
+\begin{enumerate}
+    \item \textbf{Transport:} The developer can choose which transport mechanism will be used for the network configuration. The options available are SoftAP or BLE. 
+    \begin{itemize}
+        \item The module is written in such a manner that, based on the developer's selection, only the relevant software libraries will get pulled into the final executable image. 
+        \item The unified provisioning module will also manage the state transitions, and other services, that are required for the network configuration to take place
+    \end{itemize}
+    \item \textbf{Service Name:} When the user launches the network configuration app, the user will be presented with a list of unconfigured devices, in her vicinity. The service name is this name that will be visible to the user. You may choose a name that identifies your device conveniently (abc-thermostat). It is common practice to have some element in the service name that is unique or random. This helps in scenarios when there could be multiple unconfigured devices that the user is configuring at the same time.
+    \item \textbf{Proof of Possession:} When a user brings in a new smart device, the device launches its provisioning network (BLE, SoftAP) for configuration.  How do you make sure that only the owner of the device configures the device and not their neighbours? This configurable option is for that. Please read the following subsection for more details about this option.
+    \item \textbf{Security:} The unified provisioning module currently supports two security methods for transferring the credentials: \textit{security0} and \textit{security1}. Security0 uses no security for exchanging the credentials. This is primarily used for development purposes. Security1 uses elliptic curve, \textit{curve25519} crypto for key exchange, followed by \textit{AES-CTR} encryption for data exchanged on the channel.
+\end{enumerate}
+
+\subsubsection{Proof of Possession}\index{Proof of Possession}
+
+When a user brings in a new smart device, the device launches its provisioning network (BLE, SoftAP) for configuration.  How do you make sure that only the owner of the device configures the device and not their neighbours?
+
+Some products expect the user configuring the device to provide a proof that they really own (or posses) the device that they are configuring. The proof of possession can be provided by taking some physical action on the device, or by entering some unique random key that is pasted on the device's packaging box, or by displaying on a screen, if the device is equipped with one.
+
+At manufacturing, every device can be programmed with a unique random key. This key could then be provided to the unified provisioning module as a proof of possession option. When the user configures the device using the phone application, the phone application transfers the proof of possession to the device. The unified provisioning module then validates that the proof of possession matches and then confirms the configuration.
+
+\subsection{Additional Details}\index{Additional Details}
+
+More details about Unified provisioning are available at: \url{https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/provisioning/provisioning.html}
+
+\section{NVS: Persistent key-value store}\index{NVS: Persistent key-value store}
+In the Unified Provisioning section above, we mentioned in passing that the Wi-Fi credentials are stored in the NVS. The NVS is a software component that maintains a persistent storage of key-value pairs. Since the storage is persistent this information is available even across reboots and power shutdowns. The NVS uses a dedicated section of the flash to store this information.
+
+The NVS is designed in such a manner so as to be resilient to metadata corruption across power loss events. It also takes care of wear-levelling of the flash by distributing the writes throughout the NVS partition.
+
+Application developers can also use the NVS to store any additional data that you wish to maintain as part of your application firmware. Data types like integers, NULL-terminated strings and binary blobs can be stored in the NVS. This can be used to maintain any user configurations for your product. Simple APIs like the following can be used to read and write values to the NVS.
+
+\begin{minted}{c}
+  /* Store the 'chosen_value' variable to NVS */
+  nvs_set_u32(nvs_handle, "my_key", chosen_value);
+
+  /* Read the 'chosen_value' variable from NVS */
+  nvs_get_u32(nvs_handle, "my_key", &chosen_value);
+\end{minted}
+
+
+\subsection{Additional Details}\index{Additional Details}
+
+More details about NVS are available at: \url{https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/storage/nvs_flash.html}
+
+\section{Reset to Factory}\index{Reset to Factory}
+Another common behaviour that is expected of products is \textit{Reset to Factory Settings}. Once the user configuration is stored into the NVS as discussed above, reset to factory behaviour can be achieved by simply erasing the NVS partition.
+
+Generally, this action is triggered by long-pressing a button available on the product. This can easily be configured using the \textit{iot\_button\_*()} functions
+
+\subsection{The Code}\index{The Code}\label{sec:reset_to_factory}
+In the \textit{4network\_config/} application, we use a long-press action of the same toggle push-button to configure the reset to factory behaviour.
+
+\begin{minted}{c}
+/* Register 3 second press callback */  
+iot_button_add_on_press_cb(btn_handle, 3, button_press_3sec_cb, NULL);
+\end{minted}
+
+This function makes the configuration such that the \textit{button\_press\_3sec\_cb()} function gets calls whenever the button associated with the \textit{btn\_handle} is pressed and released for longer than 3 seconds. Remember we had initialised the \textit{btn\_handle} in our Chapter \ref{the-outlet}
+
+Then callback function can then be written as follows:
+\begin{minted}{c}
+static void button_press_3sec_cb(void *arg)
+{
+    nvs_flash_erase();
+    esp_restart();
+}
+\end{minted}
+
+This code basically erases all the contents of the NVS, and then triggers a restart. Since the NVS is now wiped, the next time the device boots-up it will go back into the unconfigured mode. 
+
+If you have loaded and configured the device with the \textit{4network\_config/} application, you can see this in action and by pressing the toggle button for more than 3 seconds and then releasing it.
+
+\section{Progress so far}\index{Progress so far}
+Now we have a smart outlet that the user can configure, through a phone app, to their home Wi-Fi network. Once configured, the outlet will keep connecting to this configured network. We also have the ability to erase these settings on a long-press of a push-button.
+
+As of now, the outlet functionality and the connectivity functionality are separate. As our next step, let's control and monitor the state of the outlet (on/off) remotely.
+
 %----------------------------------------------------------------------------------------
 %	CHAPTER 6
 %----------------------------------------------------------------------------------------
 
-\chapterimage{band1.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
 \chapter{Remote Control (Cloud)}
+
+The potential for smart connected devices can be explore when the connectivity is used to control or monitor the device remotely, or through integration with other services. This is where the cloud communication comes into picture. In this Chapter, we will get the connected to a cloud platform, and enable remote control and monitoring of the device.
+
+Typically, this is achieved through either of the scenarios as shown in \ref{fig:cloud_connectivity}.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{Pictures/CloudConnectivity.png}
+    \caption{Value of Cloud Connectivity}
+    \label{fig:cloud_connectivity}
+\end{figure}
+
+In most cases, once a device is connected to the cloud, the Device Cloud platforms expose the device control and monitoring through a RESTful web API. Authenticated clients, like smartphone apps can use these APIs to access the device remotely.
+
+Additionally, integration with other clouds also helps in realising valuable use cases. For example, the device can be linked with a weather information system to automatically tune itself, or it can be linked to voice-assistant cloud interfaces (like Alexa or Google Voice Assistant) to expose control through voice.
+
+\section{Security First}\index{Security First}
+Before we get into the details about cloud connectivity, a few important words about security. 
+
+Connecting with any remote cloud infrastructure must always happen using TLS (Transport Layer Security). It is a standard and it takes care of ensuring that communication stays secure. This is a transport layer protocol. Any higher-level protocols like HTTP, or MQTT can use TLS as the underlying transport. All reputable cloud vendors provide device services over TLS.
+
+\subsection{CA Certificates}\index{CA Certificates}
+One aspect of TLS is server validation using CA certificates. The TLS layer uses the CA certificate to validate that you are really talking to the server that you are supposed to talk to. For this validation to happen, your device must be pre-programmed with one or more valid and trusted CA certificate. The TLS layer will use these as trusted certificates and then validate the server based on these trusted certificates.
+
+\subsection{Additional Details}\index{Additional Details}
+
+More details about TLS and certificates is available at: \url{https://medium.com/the-esp-journal/esp32-tls-transport-layer-security-and-iot-devices-3ac93511f6d8}
+
+
+\section{AWS IoT}\index{AWS IoT}
+In this section we will connect the device to Amazon's AWS IoT cloud. 
+
+\subsection{Quick Setup}\index{Quick Setup}
+XXX Specify quick setup instructions
+
+\subsection{Demo}\index{Demo}
+By the end of the previous sub-section, you should have the following items ready to get your device to start talking with AWS IoT:
+\begin{enumerate}
+    \item A Device Private Key (a file)
+    \item A Device Certificate (a file)
+    \item A Thing Name (a string)
+    \item A CA Certificate for the AWS-IoT service's domain name (a file)
+\end{enumerate}
+
+Before getting into the details of the code, let us actually try to use the remote control for our device.
+You may refer to the \textit{4cloud/} directory of esp-jumpstart for trying this out.
+
+To setup your AWS IoT example, 
+\begin{enumerate}
+    \item Go to the \textit{5cloud/} application
+    \item Copy the files (overwriting any previous files) as mentioned below:
+    \begin{itemize}
+        \item The AWS CA Certificate to \textbf{5cloud/certs/aws-root-ca-.pem}
+        \item The Device Private Key to \textbf{5cloud/certs/private.pem.key}
+        \item The Device Certificate to \textbf{5cloud/certs/certificate.pem.crt}
+    \end{itemize}
+    \item Modify the thing name \textbf{EXAMPLE\_THING\_NAME} in the file \textit{5cloud/main/cloud.c}
+    \item Build, flash and load the firmware on your device
+\end{enumerate}
+
+The firmware is so written that it will now connect to the AWS IoT cloud platform and will notify the cloud of any state changes. The firmware will also fetch any updates to the state from the cloud and apply them locally. 
+
+\subsection{Remote Control}\index{Remote control}
+With reference to the Section \ref{fig:cloud_connectivity}, the AWS IoT exposes a RESTful web API for all devices that connect to it. Phone applications can interact with this Web API to control and monitor the device. We will use cURL, a command-line utility that can be used to simulate this phone app. 
+
+Using curl, we can then read the current state of the device by executing the following command on your Linux/Windows/Mac console:
+\begin{minted}{console}
+
+curl --tlsv1.2 --cert /work/certificate.pem.crt \
+       --key /work/private.pem.key   \
+       https://aln7lww42a72l-ats.iot.us-east-2.amazonaws.com:8443/things/my_device_name/shadow \ 
+       | python -mjson.tool
+
+\end{minted}
+
+AWS expects that access to a device state is only granted to entities that are authorised to do so. Hence in the command above, we use the \textit{certificate.pem.crt} and \textit{private.pem.key}, which are the same files that we have configured to be in the firmware. This ensures that we can access the device's state.
+
+In the command above, this reads the state from the device \textbf{my\_device\_name}. Don't forget to replace this with the name of your thing.
+
+The device state can be modified as:
+\begin{minted}{console}
+
+curl -d '{"state":{"desired":{"output":false}}}' \ 
+     --tlsv1.2 --cert /work/certificate.pem.crt \ 
+     --key /work/private.pem.key \ 
+     https://aln7lww42a72l-ats.iot.us-east-2.amazonaws.com:8443/things/my_device_name/shadow \ 
+     | python -mjson.tool
+\end{minted}
+
+This cURL command will generate an HTTP POST operation, and sends the JSON data, as shown above, as the post's body. This JSON data instructs AWS IoT to update the state of the device to false.
+
+You can observe the corresponding change of state on the device whenever you change the state from cURL to true or false.
+
+So that's how remote control is achieved. Let's now quickly talk about the code.
+
+\subsection{The Code}\index{The Code}
+All the code for the cloud communication has been consolidated in the \textit{cloud.c} file. The structure of this file is similar to what the standard AWS IoT SDK expects. 
+
+The file uses our output driver's APIs, \textit{app\_driver\_get\_state()} and \textit{app\_driver\_toggle\_state()}, to fetch and modify the device state respectively.
+
+
+\section{Embedding Files in the Firmware}\index{Embedding Files in the Firmware}
+The device key, certificate and the CA certificate are files that the firmware should use to communicate with AWS IoT. The question is how do you make the entire contents of these files be part of your firmware image, and how do you access them within your firmware?
+
+ESP-IDF provides a great mechanism for enabling this. The \textit{component.mk} file can be used to inform the build system that the contents of certain files should be embedded within firmware image. This can be enabled by adding the following line into your application's \textit{component.mk} file.
+
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 7
 %----------------------------------------------------------------------------------------
 
-\chapterimage{head2.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
 \chapter{Firmware Upgrades}
+
+\section{Flash Partitions}\index{Flash Partitions}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 8
 %----------------------------------------------------------------------------------------
 
-\chapterimage{band1.png} % Chapter heading image
+\chapterimage{band1.jpg} % Chapter heading image
 
 \chapter{Manufacturing}
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 9
+%----------------------------------------------------------------------------------------
+
+\chapterimage{band1.jpg} % Chapter heading image
+
+\chapter{For the restless}
+XXX Consider moving this to the start of the book
+For the restless, here are the quick steps and pointers to additional information.
+\begin{enumerate}
+    \item Get Jumpstart, IDF repositories and setup your host
+    \item Read on the usage of the GPIO driver and then create a push-button (\ref{sec:push_button}) action that drives an output GPIO (\ref{sec:relay})
+    \item Use the unified provisioning API to get the devices on the user's Wi-Fi network (\ref{sec:unified_prov}). This will store the Wi-Fi name and password in NVS
+    \item Use the reference phone-app (iOS/Android) libraries or apps for building your phone applications
+    \item Implement the \textit{Reset to Factory Settings} by erasing the Wi-Fi credentials stored in NVS (\ref{sec:reset_to_factory})
+\end{enumerate}
 
 \clearpage
 \vspace*{\fill} 
