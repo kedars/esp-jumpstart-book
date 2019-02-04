@@ -4,7 +4,7 @@ Connecting to Wi-Fi
 Let’s now get this power outlet on a Wi-Fi network. In this Chapter we
 will connect to a hard-coded Wi-Fi network that is embedded within the
 device’s firmware executable image. You may refer to the
-*3wifi\_connection/* directory of esp-jumpstart for looking at this
+*3\_wifi\_connection/* directory of esp-jumpstart for looking at this
 code.
 
 Wi-Fi is a protocol that can generate asynchronous events like

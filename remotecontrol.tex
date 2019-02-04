@@ -1,6 +1,8 @@
 \documentclass[main.tex]{subfiles}
  
 \begin{document}
+\chapterimage{band1.jpg}
+\chapter{Remote Control (Cloud)}
 
 The true potential for smart connected devices can be realised when the connectivity is used to control or monitor the device remotely, or through integration with other services. This is where the cloud communication comes into picture. In this Chapter, we will get the connected to a cloud platform, and enable remote control and monitoring of the device.
 
@@ -68,14 +70,14 @@ You may refer to the \textit{4cloud/} directory of esp-jumpstart for trying this
 
 To setup your AWS IoT example, 
 \begin{enumerate}
-    \item Go to the \textit{5cloud/} application
+    \item Go to the \textit{5\_cloud/} application
     \item Copy the files (overwriting any previous files) as mentioned below:
     \begin{itemize}
-        \item The AWS CA Certificate to \textbf{5cloud/certs/aws-root-ca-.pem}
-        \item The Device Private Key to \textbf{5cloud/certs/private.pem.key}
-        \item The Device Certificate to \textbf{5cloud/certs/certificate.pem.crt}
+        \item The AWS CA Certificate to \textbf{5\_cloud/certs/aws-root-ca-.pem}
+        \item The Device Private Key to \textbf{5\_cloud/certs/private.pem.key}
+        \item The Device Certificate to \textbf{5\_cloud/certs/certificate.pem.crt}
     \end{itemize}
-    \item Modify the thing name \textbf{EXAMPLE\_THING\_NAME} in the file \textit{5cloud/main/cloud.c}
+    \item Modify the thing name \textbf{EXAMPLE\_THING\_NAME} in the file \textit{5\_cloud/main/cloud.c}
     \item Build, flash and load the firmware on your device
 \end{enumerate}
 
@@ -121,9 +123,9 @@ The file uses our output driver's APIs, \textit{app\_driver\_get\_state()} and \
 
 The AWS IoT requires 3 files to be embedded within your firmware:
 \begin{itemize}
-        \item The AWS CA Certificate  \textbf{5cloud/certs/aws-root-ca-.pem}
-        \item The Device Private Key  \textbf{5cloud/certs/private.pem.key}
-        \item The Device Certificate  \textbf{5cloud/certs/certificate.pem.crt}
+        \item The AWS CA Certificate  \textbf{5\_cloud/certs/aws-root-ca-.pem}
+        \item The Device Private Key  \textbf{5\_cloud/certs/private.pem.key}
+        \item The Device Certificate  \textbf{5\_cloud/certs/certificate.pem.crt}
 \end{itemize}
 The application uses the mechanism as shown in Section \ref{sec:embedding_files} for embedding this within the firmware.
 

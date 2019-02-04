@@ -120,18 +120,18 @@ directory of esp-jumpstart for trying this out.
 
 To setup your AWS IoT example,
 
-#. Go to the *5cloud/* application
+#. Go to the *5\_cloud/* application
 
 #. Copy the files (overwriting any previous files) as mentioned below:
 
-   -  The AWS CA Certificate to **5cloud/certs/aws-root-ca-.pem**
+   -  The AWS CA Certificate to **5\_cloud/certs/aws-root-ca-.pem**
 
-   -  The Device Private Key to **5cloud/certs/private.pem.key**
+   -  The Device Private Key to **5\_cloud/certs/private.pem.key**
 
-   -  The Device Certificate to **5cloud/certs/certificate.pem.crt**
+   -  The Device Certificate to **5\_cloud/certs/certificate.pem.crt**
 
 #. Modify the thing name **EXAMPLE\_THING\_NAME** in the file
-   *5cloud/main/cloud.c*
+   *5\_cloud/main/cloud.c*
 
 #. Build, flash and load the firmware on your device
 
@@ -204,11 +204,11 @@ respectively.
 
 The AWS IoT requires 3 files to be embedded within your firmware:
 
--  The AWS CA Certificate **5cloud/certs/aws-root-ca-.pem**
+-  The AWS CA Certificate **5\_cloud/certs/aws-root-ca-.pem**
 
--  The Device Private Key **5cloud/certs/private.pem.key**
+-  The Device Private Key **5\_cloud/certs/private.pem.key**
 
--  The Device Certificate **5cloud/certs/certificate.pem.crt**
+-  The Device Certificate **5\_cloud/certs/certificate.pem.crt**
 
 The application uses the mechanism as shown in Section
 [sec:embedding\_files] for embedding this within the firmware.

@@ -6,7 +6,8 @@ configure her Wi-Fi network’s credentials into the device at run-time.
 Since a user’s network credentials will be stored persistently on the
 device, we will also provide a *Reset to Factory* action where a user’s
 configurations can be erased from the device. You may refer to the
-*4network\_config/* directory of esp-jumpstart for looking at this code.
+*4\_network\_config/* directory of esp-jumpstart for looking at this
+code.
 
 In the previous example, we had hard-coded the Wi-Fi credentials into
 the firmware. This obviously doesn’t work for a end-user product.
@@ -107,10 +108,10 @@ Demo
 
 Before getting into the details of the network configuration workflow,
 let us get a feel for how an end-user will configure the network using
-the provided application. You may refer to the *4network\_config/*
+the provided application. You may refer to the *4\_network\_config/*
 directory of esp-jumpstart for trying this out.
 
--  Go to the *4network\_config* application.
+-  Go to the *4\_network\_config* application.
 
 -  Build, flash and load the application.
 
@@ -342,12 +343,12 @@ https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/provisioning
 NVS: Persistent key-value store
 -------------------------------
 
-In the Unified Provisioning section above, we mentioned in passing that
-the Wi-Fi credentials are stored in the NVS. The NVS is a software
-component that maintains a persistent storage of key-value pairs. Since
-the storage is persistent this information is available even across
-reboots and power shutdowns. The NVS uses a dedicated section of the
-flash to store this information.
+[sec:nvs\_info] In the Unified Provisioning section above, we mentioned
+in passing that the Wi-Fi credentials are stored in the NVS. The NVS is
+a software component that maintains a persistent storage of key-value
+pairs. Since the storage is persistent this information is available
+even across reboots and power shutdowns. The NVS uses a dedicated
+section of the flash to store this information.
 
 The NVS is designed in such a manner so as to be resilient to metadata
 corruption across power loss events. It also takes care of
@@ -390,8 +391,8 @@ on the product. This can easily be configured using the
 The Code
 ~~~~~~~~
 
-[sec:reset\_to\_factory] In the *4network\_config/* application, we use
-a long-press action of the same toggle push-button to configure the
+[sec:reset\_to\_factory] In the *4\_network\_config/* application, we
+use a long-press action of the same toggle push-button to configure the
 reset to factory behaviour.
 
 .. code:: c
@@ -420,7 +421,7 @@ triggers a restart. Since the NVS is now wiped, the next time the device
 boots-up it will go back into the unconfigured mode.
 
 If you have loaded and configured the device with the
-*4network\_config/* application, you can see this in action and by
+*4\_network\_config/* application, you can see this in action and by
 pressing the toggle button for more than 3 seconds and then releasing
 it.
 

@@ -2,9 +2,11 @@
  
 \begin{document}
 
+\chapterimage{band1.jpg}
+\chapter{Network Configuration}
 
 In this step we will build a firmware such that the end-user can configure her Wi-Fi network's credentials into the device at run-time. Since a user's network credentials will be stored persistently on the device, we will also provide a \textit{Reset to Factory} action where a user's configurations can be erased from the device.
-You may refer to the \textit{4network\_config/} directory of esp-jumpstart for looking at this code.
+You may refer to the \textit{4\_network\_config/} directory of esp-jumpstart for looking at this code.
 
 In the previous example, we had hard-coded the Wi-Fi credentials into the firmware. This obviously doesn't work for a end-user product.
 
@@ -53,10 +55,10 @@ XXX
 
 \section{Demo}\index{Demo}
 Before getting into the details of the network configuration workflow, let us get a feel for how an end-user will configure the network using the provided application.
-You may refer to the \textit{4network\_config/} directory of esp-jumpstart for trying this out.
+You may refer to the \textit{4\_network\_config/} directory of esp-jumpstart for trying this out.
 
 \begin{itemize}
-    \item Go to the \textit{4network\_config} application.
+    \item Go to the \textit{4\_network\_config} application.
     \item Build, flash and load the application.
     \item By default, the firmware is launched in BLE mode.
     \item Install the companion phone application for network configuration from this location: \url{https://github.com/espressif/esp-idf-provisioning-android/releases}. Please install the latest app with \textbf{sec1-ble} as part of its name.
@@ -175,7 +177,7 @@ At manufacturing, every device can be programmed with a unique random key. This 
 
 More details about Unified provisioning are available at: \url{https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/provisioning/provisioning.html}
 
-\section{NVS: Persistent key-value store}\index{NVS: Persistent key-value store}
+\section{NVS: Persistent key-value store}\index{NVS: Persistent key-value store}\label{sec:nvs_info}
 In the Unified Provisioning section above, we mentioned in passing that the Wi-Fi credentials are stored in the NVS. The NVS is a software component that maintains a persistent storage of key-value pairs. Since the storage is persistent this information is available even across reboots and power shutdowns. The NVS uses a dedicated section of the flash to store this information.
 
 The NVS is designed in such a manner so as to be resilient to metadata corruption across power loss events. It also takes care of wear-levelling of the flash by distributing the writes throughout the NVS partition.
@@ -201,7 +203,7 @@ Another common behaviour that is expected of products is \textit{Reset to Factor
 Generally, this action is triggered by long-pressing a button available on the product. This can easily be configured using the \textit{iot\_button\_*()} functions
 
 \subsection{The Code}\index{The Code}\label{sec:reset_to_factory}
-In the \textit{4network\_config/} application, we use a long-press action of the same toggle push-button to configure the reset to factory behaviour.
+In the \textit{4\_network\_config/} application, we use a long-press action of the same toggle push-button to configure the reset to factory behaviour.
 
 \begin{minted}{c}
 /* Register 3 second press callback */  
@@ -221,7 +223,7 @@ static void button_press_3sec_cb(void *arg)
 
 This code basically erases all the contents of the NVS, and then triggers a restart. Since the NVS is now wiped, the next time the device boots-up it will go back into the unconfigured mode. 
 
-If you have loaded and configured the device with the \textit{4network\_config/} application, you can see this in action and by pressing the toggle button for more than 3 seconds and then releasing it.
+If you have loaded and configured the device with the \textit{4\_network\_config/} application, you can see this in action and by pressing the toggle button for more than 3 seconds and then releasing it.
 
 \section{Progress so far}\index{Progress so far}
 Now we have a smart outlet that the user can configure, through a phone app, to their home Wi-Fi network. Once configured, the outlet will keep connecting to this configured network. We also have the ability to erase these settings on a long-press of a push-button.

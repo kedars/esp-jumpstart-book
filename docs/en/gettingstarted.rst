@@ -30,7 +30,7 @@ Getting ESP-Jumpstart
 ---------------------
 
 Let’s get started by cloning the ESP-Jumpstart git repositories
-https://github.com/mahavirj/esp-jumpstart. This repository contains the
+https://github.com/espressif/esp-jumpstart. This repository contains the
 sequence of applications that we will use for this exercise. This
 repository also contains a stable release version of IDF as a git
 submodule. This ensures that we are working off of a stable release of
@@ -38,7 +38,7 @@ IDF.
 
 ::
 
-    $ git clone --recursive https://github.com/mahavirj/esp-jumpstart
+    $ git clone --recursive https://github.com/espressif/esp-jumpstart
 
 This repository already contains a copy of the IDF, Espressif’s IoT
 Development Framework. Let’s define the IDF\_PATH variable to point to
@@ -120,7 +120,7 @@ configuration for this application.
 
 ::
 
-    $ cd esp-jumpstart/1hello_world
+    $ cd esp-jumpstart/1_hello_world
     $ make -j8 menuconfig
 
 This will first open a pop-up screen for the SDK configuration.

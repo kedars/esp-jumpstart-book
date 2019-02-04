@@ -7,9 +7,9 @@ be discussed is the flash partitions.
 Flash Partitions
 ----------------
 
-The ESP-IDF framework divides the flash into multiple logical partitions
-for storing various components. The typical way this is done is shown in
-the figure [fig:flash\_parts].
+[sec:flash\_partitions] The ESP-IDF framework divides the flash into
+multiple logical partitions for storing various components. The typical
+way this is done is shown in the figure [fig:flash\_parts].
 
 .. figure:: Pictures/FlashPartitions_Intro.png
    :alt: Flash Partitions Structure
@@ -58,10 +58,50 @@ steps occur during the OTA upgrade workflow:
 
    Firmware Upgrade Flow
 
+Updating the Flash Partitions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[sec:updating\_flash\_partitions] So how exactly do we instruct the IDF
+to create a partition table that has this OTA-Data partition and the 2
+partitions for storing the firmware?
+
+This can be achieved by creating a partitions file. This is a simple CSV
+(Comma Separated Values) file that instructs IDF what are the partitions
+that we want, what should be their size and how should they be placed.
+
+The partitions file that is used for this example is shown below:
+
+.. code:: text
+
+
+    # Name,   Type, SubType, Offset,  Size, Flags
+    # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
+    nvs,      data, nvs,     ,        0x6000,
+    otadata,  data, ota,     ,        0x2000,
+    phy_init, data, phy,     ,        0x1000,
+    ota_0,    app,    ota_0,   ,      1600K,
+    ota_1,    app,    ota_1,   ,      1600K,
+
+The above partitions file instructs the IDF to create partitions: NVS,
+OTA-Data, OTA 0 and OTA 1, and it also specifies that sizes for each of
+these.
+
+Once we create this partition file, we should instruct IDF to use this
+custom partitioning mechanism, over its default mechanism. This can be
+enabled by mentioned this detail in the SDK configuration. In the case
+of our application right now, this setting has already been activated in
+the *6\_ota/sdkconfig.defaults* file. Hence you don’t have to do any
+extra step for activating this.
+
+But should you wish to use a different partitions file, or update the
+offset of the primary firmware, you should modify this setting. This can
+be done by executing the *make menuconfig* command, and then configuring
+correct options in *menuconfig* -> *Partition Table*.
+
 The Code
 --------
 
-Let’s check the code for enabling this functionality.
+Now let’s check the code for enabling this functionality.
 
 .. code:: c
 
@@ -91,3 +131,13 @@ group of devices as they have identified.
 You as the manufacturer can make the best choice about the appropriate
 manner for delivering the firmware upgrade notification to the device,
 and then calling the *esp\_https\_ota()* API.
+
+Progress So Far
+---------------
+
+With this firmware we enable a key feature of any smart connected
+device, the over-the-air firmware upgrade.
+
+Our product firmware is almost ready to be go, but for one any
+considerations for unique device data. Let’s wrap that up in the
+upcoming Chapter.

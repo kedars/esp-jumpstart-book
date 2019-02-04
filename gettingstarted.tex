@@ -1,6 +1,8 @@
 \documentclass[main.tex]{subfiles}
  
 \begin{document}
+\chapterimage{band1.jpg}
+\chapter{Getting Started}
 
 In this chapter, our aim would be to get our development setup functional, and also to get an understanding for the development tools and repositories available around ESP32.
 
@@ -18,10 +20,10 @@ The PC, or the Development Host can be any of Linux, Windows or Mac. The ESP32 b
 
 \section{Getting ESP-Jumpstart}\index{Getting ESP-Jumpstart}
 
-Let's get started by cloning the ESP-Jumpstart git repositories \url{https://github.com/mahavirj/esp-jumpstart}. This repository contains the sequence of applications that we will use for this exercise. This repository also contains a stable release version of IDF as a git submodule. This ensures that we are working off of a stable release of IDF.
+Let's get started by cloning the ESP-Jumpstart git repositories \url{https://github.com/espressif/esp-jumpstart}. This repository contains the sequence of applications that we will use for this exercise. This repository also contains a stable release version of IDF as a git submodule. This ensures that we are working off of a stable release of IDF.
 
 \begin{verbatim}
-$ git clone --recursive https://github.com/mahavirj/esp-jumpstart
+$ git clone --recursive https://github.com/espressif/esp-jumpstart
 \end{verbatim}
 
 This repository already contains a copy of the IDF, Espressif's IoT Development Framework. Let's define the IDF\_PATH variable to point to the correction location of IDF. This can be done by executing the following command in your console:
@@ -79,7 +81,7 @@ Typically, there is a feature v/s footprint tradeoff, where pulling in a new fea
 Let us now first use the \textit{Hello World} application and launch the SDK configuration for this application.
 
 \begin{verbatim}
-$ cd esp-jumpstart/1hello_world
+$ cd esp-jumpstart/1_hello_world
 $ make -j8 menuconfig
 \end{verbatim}
 
