@@ -1,7 +1,9 @@
 | **Building Products with ESP32 *fast***
 | Jumpstart: From concept to production
 
-|image|
++------------------+
+| |Jumpstart Now|_ |
++------------------+
 
  
 .. toctree::
@@ -18,5 +20,5 @@
 
 
 
-.. |image| image:: Pictures/cover_page.png
-
+.. |Jumpstart Now| image:: Pictures/cover_page.png
+.. _Jumpstart Now: introduction.html

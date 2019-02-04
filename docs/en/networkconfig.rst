@@ -65,19 +65,6 @@ this method though is that it is very reliable (SoftAP being just Wi-Fi
 is an established mechanism), and doesn’t require a lot of additional
 code (since it’s all over Wi-Fi).
 
-Apple’s WAC
-^^^^^^^^^^^
-
-Apple’s Wireless Accessory Configuration (WAC) protocol also uses the
-SoftAP mechanism for transferring credentials. But in this case, iOS
-itself manages the switching of Wi-Fi networks between the device’s
-network and the user’s home network. Since this support is embedded
-within iOS itself, this offers a much smoother user experience. One
-point to note though is that Apple’s WAC configuration mechanism
-mandates that your device, the outlet, should have Apple’s security
-co-processor (a chip) embedded on your board. So the simplified user
-experience comes at the cost of having another chipset embedded within
-your board design.
 
 BLE
 ~~~

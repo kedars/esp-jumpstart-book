@@ -39,9 +39,6 @@ In the SoftAP mechanism your outlet will launch its own temporary Wi-Fi Access P
 \end{itemize}
 From a user experience perspective, the first step of this requires the user to change their phone's Wi-Fi network. This may be confusing to some users. Additionally, changing the Wi-Fi network programatically through the phone application may not always be possible (iOS and some variants of Android don't allow application to this). The advantage of this method though is that it is very reliable (SoftAP being just Wi-Fi is an established mechanism), and doesn't require a lot of additional code (since it's all over Wi-Fi).
 
-\subsubsection{Apple's WAC}\index{Apple's WAC}
-Apple's Wireless Accessory Configuration (WAC) protocol also uses the SoftAP mechanism for transferring credentials. But in this case, iOS itself manages the switching of Wi-Fi networks between the device's network and the user's home network. Since this support is embedded within iOS itself, this offers a much smoother user experience.
-One point to note though is that Apple's WAC configuration mechanism mandates that your device, the outlet, should have Apple's security co-processor (a chip) embedded on your board. So the simplified user experience comes at the cost of having another chipset embedded within your board design.
 
 \subsection{BLE}\index{BLE}
 
