@@ -6,8 +6,9 @@ be discussed is the flash partitions.
 
 Flash Partitions
 ----------------
+.. _flash-partitions:
 
-[sec:flash\_partitions] The ESP-IDF framework divides the flash into
+The ESP-IDF framework divides the flash into
 multiple logical partitions for storing various components. The typical
 way this is done is shown in the figure [fig:flash\_parts].
 

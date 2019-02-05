@@ -1,8 +1,12 @@
-| **Building Products with ESP32 *fast***
-| Jumpstart: From concept to production
+ESP-Jumpstart
+=============
+
+| **Building Products with ESP32 *fast***: Jumpstart from concept to production
 
 +------------------+
 | |Jumpstart Now|_ |
++------------------+
+| `Jumpstart Now`_ |
 +------------------+
 
  
@@ -11,7 +15,7 @@
 
    Introduction <introduction>
    Getting Started <gettingstarted>
-   The Outlet <theoutlet>
+   The Driver <theoutlet>
    Connecting to Wi-Fi <wifi>
    Network Configuration <networkconfig>
    Remote Control (Cloud) <remotecontrol>
@@ -20,5 +24,5 @@
 
 
 
-.. |Jumpstart Now| image:: Pictures/cover_page.png
+.. |Jumpstart Now| image:: Pictures/cover_page.svg
 .. _Jumpstart Now: introduction.html

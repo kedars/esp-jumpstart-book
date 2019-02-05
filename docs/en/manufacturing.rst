@@ -32,7 +32,7 @@ Thus we can reuse the same concept to store factory unique information.
 Multiple NVS Partitions
 -----------------------
 
-We had looked at *Flash Partitions* in Section [sec:flash\_partitions]
+We had looked at *Flash Partitions* in Section :ref:`Flash Partitions <flash-partitions>`
 while discussing firmware upgrades. In Section
 [sec:updating\_flash\_partitions] we also looked at how the flash
 partitions can be modified. For this example, we will add this extra NVS
