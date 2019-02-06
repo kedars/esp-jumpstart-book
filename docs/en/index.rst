@@ -16,11 +16,12 @@ ESP-Jumpstart
    Introduction <introduction>
    Getting Started <gettingstarted>
    The Driver <theoutlet>
-   Connecting to Wi-Fi <wifi>
+   Wi-Fi Connection <wifi>
    Network Configuration <networkconfig>
    Remote Control (Cloud) <remotecontrol>
    Firmware Upgrades <firmwareupgrade>
    Manufacturing <manufacturing>
+   Security Considerations <security>
 
 
 

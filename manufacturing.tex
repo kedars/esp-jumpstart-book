@@ -39,7 +39,7 @@ nvs_get_str(fctry_handle, “serial_no”, buf, &buflen);
 
 So, we can now disable the code that embeds any certificates in the firmware itself, and instead, read them from the unique factory partition that is flashed for this device.
 
-\section{Generating the Factory Data}\index{Generating the Factory Data}
+\section{Generating the Factory Data}\index{Generating the Factory Data}\label{sec:gen_factory_data}
 Now we are good to go from the firmware perspective. But we still need to identify some mechanism for generating the factory data that will be written to the \textit{fctry} partition.
 
 The utility \textit{idf/nvs\_flash/nvs\_partition\_generator/nvs\_partition\_gen.py} is used to generate an NVS image on the development host. This image can then be written to the flash into the location of the \textit{fctry} partition.

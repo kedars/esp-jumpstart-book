@@ -45,8 +45,8 @@ In the SoftAP mechanism your outlet will launch its own temporary Wi-Fi
 Access Point. The user can then connect their smart-phones to this
 temporary Wi-Fi network. And then use this connection to transfer the
 Home Wi-Fi’s credentials to the outlet. Many connected devices in the
-market today, like the Google Chromecast, Amazon’s Echo use this kind of
-mechanism. In this network configuration workflow, the user has to
+market today use this kind of mechanism. In this network configuration
+workflow, the user has to
 
 -  switch their phone’s Wi-Fi network to your outlet’s temporary Wi-Fi
    network
@@ -64,7 +64,6 @@ variants of Android don’t allow application to this). The advantage of
 this method though is that it is very reliable (SoftAP being just Wi-Fi
 is an established mechanism), and doesn’t require a lot of additional
 code (since it’s all over Wi-Fi).
-
 
 BLE
 ~~~
@@ -123,6 +122,8 @@ XXX add network configuration images
 
 Unified Provisioning
 --------------------
+
+[sec:unified\_prov]
 
 Espressif provides a **Unified Provisioning** module for assisting you
 with your network configuration. When this module is invoked from your

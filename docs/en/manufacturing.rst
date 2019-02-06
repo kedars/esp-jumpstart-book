@@ -32,7 +32,7 @@ Thus we can reuse the same concept to store factory unique information.
 Multiple NVS Partitions
 -----------------------
 
-We had looked at *Flash Partitions* in Section :ref:`Flash Partitions <flash-partitions>`
+We had looked at *Flash Partitions* in Section [sec:flash\_partitions]
 while discussing firmware upgrades. In Section
 [sec:updating\_flash\_partitions] we also looked at how the flash
 partitions can be modified. For this example, we will add this extra NVS
@@ -73,9 +73,9 @@ partition that is flashed for this device.
 Generating the Factory Data
 ---------------------------
 
-Now we are good to go from the firmware perspective. But we still need
-to identify some mechanism for generating the factory data that will be
-written to the *fctry* partition.
+[sec:gen\_factory\_data] Now we are good to go from the firmware
+perspective. But we still need to identify some mechanism for generating
+the factory data that will be written to the *fctry* partition.
 
 The utility
 *idf/nvs\_flash/nvs\_partition\_generator/nvs\_partition\_gen.py* is

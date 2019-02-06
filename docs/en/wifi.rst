@@ -1,5 +1,5 @@
-Connecting to Wi-Fi
-===================
+Wi-Fi Connection
+================
 
 Let’s now get this power outlet on a Wi-Fi network. In this Chapter we
 will connect to a hard-coded Wi-Fi network that is embedded within the

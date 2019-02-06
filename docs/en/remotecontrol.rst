@@ -93,7 +93,8 @@ The file can then be accessed using these start and end pointers.
 AWS IoT
 -------
 
-In this section we will connect the device to Amazon’s AWS IoT cloud.
+[sec:aws\_cloud] In this section we will connect the device to Amazon’s
+AWS IoT cloud.
 
 Quick Setup
 ~~~~~~~~~~~

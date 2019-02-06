@@ -31,14 +31,13 @@ There can be multiple channels through which your device can receive the Wi-Fi c
 Each of these have their own pros and cons. There is no single correct way of doing this, some developers may pick one way, and some the other, depending upon what you value more.
 
 \subsection{SoftAP}\index{SoftAP}
-In the SoftAP mechanism your outlet will launch its own temporary Wi-Fi Access Point. The user can then connect their smart-phones to this temporary Wi-Fi network. And then use this connection to transfer the Home Wi-Fi's credentials to the outlet. Many connected devices in the market today, like the Google Chromecast, Amazon's Echo use this kind of mechanism. In this network configuration workflow, the user has to 
+In the SoftAP mechanism your outlet will launch its own temporary Wi-Fi Access Point. The user can then connect their smart-phones to this temporary Wi-Fi network. And then use this connection to transfer the Home Wi-Fi's credentials to the outlet. Many connected devices in the market today use this kind of mechanism. In this network configuration workflow, the user has to 
 \begin{itemize}
     \item switch their phone's Wi-Fi network to your outlet's temporary Wi-Fi network
     \item launch your phone application
     \item enter her home Wi-Fi credentials that will be then transferred to the outlet over the SoftAP connection
 \end{itemize}
 From a user experience perspective, the first step of this requires the user to change their phone's Wi-Fi network. This may be confusing to some users. Additionally, changing the Wi-Fi network programatically through the phone application may not always be possible (iOS and some variants of Android don't allow application to this). The advantage of this method though is that it is very reliable (SoftAP being just Wi-Fi is an established mechanism), and doesn't require a lot of additional code (since it's all over Wi-Fi).
-
 
 \subsection{BLE}\index{BLE}
 
@@ -72,7 +71,7 @@ XXX add network configuration images
 \end{itemize}
 
  
-\section{Unified Provisioning}\index{Unified Provisioning}
+\section{Unified Provisioning}\index{Unified Provisioning}\label{sec:unified_prov}
 
 Espressif provides a \textbf{Unified Provisioning} module for assisting you with your network configuration. When this module is invoked from your firmware executable, the module takes care of managing all the state transitions (like starting/stopping the softAP/BLE interface, exchanging the credentials securely, storing them for subsequent use etc).
 
