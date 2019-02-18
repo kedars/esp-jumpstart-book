@@ -134,13 +134,6 @@ configuration, say “Yes”.
 Build and Flash
 ~~~~~~~~~~~~~~~
 
-::
-
-    $ make -j8 flash monitor
-
-The SDK will then build the entire SDK and the application. Once the
-build is successful, it will write the generated firmware to the device.
-
 At this point you should have connected the device to your development
 host. If you have installed the correct drivers, you should see a new
 device in your machine. For Windows, a new COM port would have been
@@ -161,6 +154,15 @@ maximum baud rate for our flashing.
 ::
 
     $ export ESPBAUD=921600
+
+Now let’s go ahead and ask make to build and flash the firmware.
+
+::
+
+    $ make -j8 flash monitor
+
+The SDK will then build the entire SDK and the application. Once the
+build is successful, it will write the generated firmware to the device.
 
 The Code
 --------

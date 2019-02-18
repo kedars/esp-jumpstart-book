@@ -184,19 +184,19 @@ through your firmware is shown below:
 
 .. code:: c
 
-        if (conn_mgr_prov_is_provisioned(&provisioned) != ESP_OK) {
-            return;
-        }
 
-        if (provisioned != true) {
-            /* Starting unified provisioning */
-            conn_mgr_prov_start_provisioning(prov_type,
+    if (conn_mgr_prov_is_provisioned(&provisioned) != ESP_OK) {
+        return;
+    }
+
+    if (provisioned != true) {
+        /* Starting unified provisioning */
+        conn_mgr_prov_start_provisioning(prov_type,
                    security, pop, service_name, service_key);
-        } else {
-            /* Start the station */
-            wifi_init_sta();
-        }
-    
+    } else {
+        /* Start the station */
+        wifi_init_sta();
+    }
 
 The *conn\_mgr\_prov* component provides a wrapper over the unified
 provisioning interface. Some notes about the code above:

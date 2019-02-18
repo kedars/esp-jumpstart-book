@@ -48,7 +48,7 @@ ESP-IDF is Espressif's IoT Development Framework.
 
 The IDF has a component-based design. 
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Pictures/idf_comp.png}
     \caption{Component Based Design}
@@ -61,9 +61,9 @@ This design allows you to use your own or third-party components that are built 
 
 A developer typically builds \textit{applications} against the IDF. The applications typically contains the business logic, any drivers for externally interfaced peripherals and the SDK configuration.
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.1]{Pictures/app_structure.png}
+    \includegraphics[scale=0.4]{Pictures/app_structure.png}
     \caption{Application's Structure}
     \label{fig:app_structure}
 \end{figure}
@@ -92,12 +92,6 @@ For our current scenario, we will choose the default configuration. Later in thi
 \ksnotebox{If you are building the application for the first time, the SDK configuration screen will pop-up automatically even if you build for some other build target. For subsequent builds this SDK configuration screen wouldn't show up again unless you specify the \textit{menuconfig} target.}
 
 \subsection{Build and Flash}\index{Build and Flash}
-\begin{verbatim}
-$ make -j8 flash monitor
-\end{verbatim}
-
-The SDK will then build the entire SDK and the application. Once the build is successful, it will write the generated firmware to the device.
-
 At this point you should have connected the device to your development host. If you have installed the correct drivers, you should see a new device in your machine. For Windows, a new COM port would have been created. For Linux/OSX, a new file would appear in /dev/tty.*. The flashing utility should know which serial port is connected to your device. This can be configured by setting the 'ESPPORT' environment variable. The following command should help:
 \begin{verbatim}
 $ export ESPPORT=/dev/tty.SLAB_USBTOUART
@@ -107,6 +101,13 @@ The rate at which the flashing utility writes firmware to the device can also be
 \begin{verbatim}
 $ export ESPBAUD=921600
 \end{verbatim}
+
+Now let's go ahead and ask make to build and flash the firmware.
+\begin{verbatim}
+$ make -j8 flash monitor
+\end{verbatim}
+
+The SDK will then build the entire SDK and the application. Once the build is successful, it will write the generated firmware to the device.
 
 \ksnotebox{On some development boards you may have to press a specific button configuration in order to put the development board into the 'flashing mode'. Please refer to your development board's documentation for these details. For ESP32-DevKit-C, no such button press is required, the board is automatically put into the flashing mode by the flasher utility.}
 

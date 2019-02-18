@@ -15,3 +15,6 @@ Flash Encryption
 
 Secure Boot
 ~~~~~~~~~~~
+
+Encryption NVS
+~~~~~~~~~~~~~~

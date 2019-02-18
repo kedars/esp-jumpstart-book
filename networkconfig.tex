@@ -102,7 +102,7 @@ if (conn_mgr_prov_is_provisioned(&provisioned) != ESP_OK) {
     return;
 }
 
-if (! provisioned) {
+if (provisioned != true) {
     /* Starting unified provisioning */
     conn_mgr_prov_start_provisioning(prov_type,
                security, pop, service_name, service_key);
