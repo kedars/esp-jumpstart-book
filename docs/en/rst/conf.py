@@ -7,7 +7,7 @@
 # Importing conf_common adds all the non-language-specific
 # parts to this conf module
 import sys, os
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('../..'))
 from conf_common import *
 
 # General information about the project.
