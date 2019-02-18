@@ -1,2 +1,0 @@
-[31m/home/esp/kedars/esp-jumpstart-book/docs/en/main.rst: WARNING: document isn't included in any toctree[39;49;00m
-[31mWARNING: html_static_path entry u'/home/esp/kedars/esp-jumpstart-book/docs/en/../_static' does not exist[39;49;00m
