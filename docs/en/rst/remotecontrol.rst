@@ -27,10 +27,12 @@ information system to automatically tune itself, or it can be linked to
 voice-assistant cloud interfaces (like Alexa or Google Voice Assistant)
 to expose control through voice.
 
+.. _sec_security\_first:
+
 Security First
 --------------
 
-[sec:security\_first] Before we get into the details about cloud
+ Before we get into the details about cloud
 connectivity, a few important words about security.
 
 Connecting with any remote cloud infrastructure must always happen using
@@ -49,7 +51,7 @@ the server that you are supposed to talk to. For this validation to
 happen, your device must be pre-programmed with one or more valid and
 trusted CA certificate. The TLS layer will use these as trusted
 certificates and then validate the server based on these trusted
-certificates. Please refer to Section [sec:embedding\_files] for more
+certificates. Please refer to Section :ref:`sec_embedding\_files` for more
 details about how the CA certificate be made part of your firmware.
 
 Additional Details
@@ -58,10 +60,12 @@ Additional Details
 More details about TLS and certificates is available at:
 https://medium.com/the-esp-journal/esp32-tls-transport-layer-security-and-iot-devices-3ac93511f6d8
 
+.. _sec_embedding\_files:
+
 Embedding Files in the Firmware
 -------------------------------
 
-[sec:embedding\_files] At times, the firmware has to use certain files
+ At times, the firmware has to use certain files
 directly. Most commonly, in the case of CA certificates, that need to be
 embedded within the firmware for server validation.
 
@@ -90,10 +94,12 @@ as follows:
 
 The file can then be accessed using these start and end pointers.
 
+.. _sec_aws\_cloud:
+
 AWS IoT
 -------
 
-[sec:aws\_cloud] In this section we will connect the device to Amazon’s
+ In this section we will connect the device to Amazon’s
 AWS IoT cloud.
 
 Quick Setup
@@ -212,7 +218,7 @@ The AWS IoT requires 3 files to be embedded within your firmware:
 -  The Device Certificate **5\_cloud/certs/certificate.pem.crt**
 
 The application uses the mechanism as shown in Section
-[sec:embedding\_files] for embedding this within the firmware.
+:ref:`sec_embedding\_files` for embedding this within the firmware.
 
 Progress so far
 ---------------
