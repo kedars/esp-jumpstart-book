@@ -178,13 +178,11 @@ The following components are offered:
    for testing during your development, or for skinning with your
    brand’s elements.
 
-.. _sec_unified\_prov:
-
 The Code
 ~~~~~~~~
 
- The code for invoking the unified provisioning
-through your firmware is shown below:
+The code for invoking the unified provisioning through your firmware is
+shown below:
 
 .. code:: c
 
@@ -337,7 +335,7 @@ https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/provisioning
 NVS: Persistent key-value store
 -------------------------------
 
- In the Unified Provisioning section above, we mentioned
+In the Unified Provisioning section above, we mentioned
 in passing that the Wi-Fi credentials are stored in the NVS. The NVS is
 a software component that maintains a persistent storage of key-value
 pairs. Since the storage is persistent this information is available
@@ -387,7 +385,7 @@ on the product. This can easily be configured using the
 The Code
 ~~~~~~~~
 
- In the *4\_network\_config/* application, we
+In the *4\_network\_config/* application, we
 use a long-press action of the same toggle push-button to configure the
 reset to factory behaviour.
 

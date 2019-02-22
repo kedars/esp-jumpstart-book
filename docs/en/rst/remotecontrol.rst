@@ -9,7 +9,7 @@ connected to a cloud platform, and enable remote control and monitoring
 of the device.
 
 Typically, this is achieved through either of the scenarios as shown in
-[fig:cloud\_connectivity].
+the figure.
 
 .. figure:: ../../_static/cloud_connectivity.png
    :alt: Value of Cloud Connectivity
@@ -32,7 +32,7 @@ to expose control through voice.
 Security First
 --------------
 
- Before we get into the details about cloud
+Before we get into the details about cloud
 connectivity, a few important words about security.
 
 Connecting with any remote cloud infrastructure must always happen using
@@ -65,7 +65,7 @@ https://medium.com/the-esp-journal/esp32-tls-transport-layer-security-and-iot-de
 Embedding Files in the Firmware
 -------------------------------
 
- At times, the firmware has to use certain files
+At times, the firmware has to use certain files
 directly. Most commonly, in the case of CA certificates, that need to be
 embedded within the firmware for server validation.
 
@@ -99,7 +99,7 @@ The file can then be accessed using these start and end pointers.
 AWS IoT
 -------
 
- In this section we will connect the device to Amazon’s
+In this section we will connect the device to Amazon’s
 AWS IoT cloud.
 
 Quick Setup
@@ -150,11 +150,10 @@ locally.
 Remote Control
 ~~~~~~~~~~~~~~
 
-With reference to the Section [fig:cloud\_connectivity], the AWS IoT
-exposes a RESTful web API for all devices that connect to it. Phone
-applications can interact with this Web API to control and monitor the
-device. We will use cURL, a command-line utility that can be used to
-simulate this phone app.
+For remote control, AWS IoT exposes a RESTful web API for all devices
+that connect to it. Phone applications can interact with this Web API to
+control and monitor the device. We will use cURL, a command-line utility
+that can be used to simulate this phone app.
 
 Using curl, we can then read the current state of the device by
 executing the following command on your Linux/Windows/Mac console:
