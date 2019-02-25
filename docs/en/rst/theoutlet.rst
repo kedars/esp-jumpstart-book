@@ -25,6 +25,10 @@ Let’s first create a push-button. The Devkit-C development board has a
 button called ’boot’ which is connected to GPIO 0. We will configure
 this button to be used to toggle the outlet’s state.
 
+|  \|c\|X\| **Note** & If you are developing with a different
+  development board, please use the appropriate GPIO number for the
+  button that this board may have.
+
 .. _sec_push\_button:
 
 The Code

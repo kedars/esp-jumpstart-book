@@ -111,6 +111,10 @@ directory of esp-jumpstart for trying this out.
 -  Launch the application and follow the wizard as shown in the images
    below.
 
+|  \|c\|X\| **Note** & As of now, only Android users can try the
+  application out. For iOS users, we are working on enabling an
+  application with *TestFlight* soon.
+
 XXX add network configuration images
 
 -  If all goes well, your device would be connected to your Home Wi-Fi
@@ -157,6 +161,10 @@ the credentials securely, storing them for subsequent use etc).
    in multiple programming languages in native format. Please note that
    this data representation is not forced on application specific data
    and the developers may choose the representation of their choice.
+
+|  \|c\|X\| **Note** & More details about Unified provisioning are
+  available at:
+  https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/provisioning/provisioning.html
 
 The following components are offered:
 

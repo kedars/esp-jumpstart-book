@@ -131,6 +131,12 @@ configuration options. For now, you can simply exit from this screen. On
 exiting, when asked for a prompt whether you want to save the SDK
 configuration, say “Yes”.
 
+|  \|c\|X\| **Note** & If you are building the application for the first
+  time, the SDK configuration screen will pop-up automatically even if
+  you build for some other build target. For subsequent builds this SDK
+  configuration screen wouldn’t show up again unless you specify the
+  *menuconfig* target.
+
 Build and Flash
 ~~~~~~~~~~~~~~~
 
@@ -163,6 +169,13 @@ Now let’s go ahead and ask make to build and flash the firmware.
 
 The SDK will then build the entire SDK and the application. Once the
 build is successful, it will write the generated firmware to the device.
+
+|  \|c\|X\| **Note** & On some development boards you may have to press
+  a specific button configuration in order to put the development board
+  into the ’flashing mode’. Please refer to your development board’s
+  documentation for these details. For ESP32-DevKit-C, no such button
+  press is required, the board is automatically put into the flashing
+  mode by the flasher utility.
 
 The Code
 --------

@@ -54,6 +54,12 @@ collects events from the TCP/IP Stack and the Wi-Fi subsystem. It
 delivers these events to the callback that is registered through the
 first parameter.
 
+|  \|c\|X\| **Note** & The callback handler is executed from the event
+  loop task. Care should be taken to ensure that this callback’s
+  execution doesn’t overflow the event loop’s stack. If you need a
+  deeper stack in your callback, you can increase the event loop’s stack
+  size by changing the SDK configuration.
+
 The asynchronous event handler that is registered with the event loop
 can be implemented as:
 
