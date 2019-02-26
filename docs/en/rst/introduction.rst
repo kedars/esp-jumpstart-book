@@ -55,8 +55,8 @@ You will require the following to get started:
    closest store. You could also use any other ESP32 development board
    if you already have one.
 
--  A Development host setup
-   (https://docs.espressif.com/projects/esp-idf/en/latest/get-started/)
+-  A Development host setup (Windows, Linux or Mac) that will be used
+   for development.
 
 For the Restless
 ----------------
