@@ -1,7 +1,11 @@
 ESP-Jumpstart
 =============
 
-| **Building Products with ESP32 *fast***: Jumpstart from concept to production
+.. role:: testks
+   :class: testks
+          
+
+| **Building Products with ESP32** :testks:`fast`: Jumpstart from concept to production
 
 +------------------+
 | |Jumpstart Now|_ |
@@ -27,3 +31,4 @@ ESP-Jumpstart
 
 .. |Jumpstart Now| image:: ../../_static/cover_page.svg
 .. _Jumpstart Now: introduction.html
+
