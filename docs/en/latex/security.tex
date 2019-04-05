@@ -39,8 +39,10 @@ This command prints out a list of certificates. The last certificate from this l
 \section{Securing Physical Accesses}
 Now let us look at some of the features of ESP32 that protect from physically tampering with the device.
 
-For ESP8266:
-ESP8266 cannot support these features and thus cannot be secured from physical access.
+\begin{tcolorbox}
+  \textbf{For ESP8266:}\linebreak
+  ESP8266 cannot support these features and thus cannot be secured from physical access.
+\end{tcolorbox}
 
 \subsection{Secure Boot}\index{Secure Boot}
 The secure boot support ensures that when the ESP32 executes any software from flash, that software is trusted and signed by a known entity. If even a single bit in the software bootloader and application firmware is modified, the firmware is not trusted, and the device will refuse to execute this untrusted code.

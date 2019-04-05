@@ -63,8 +63,8 @@ Securing Physical Accesses
 Now let us look at some of the features of ESP32 that protect from
 physically tampering with the device.
 
-For ESP8266: ESP8266 cannot support these features and thus cannot be
-secured from physical access.
+**For ESP8266:** ESP8266 cannot support these features and thus cannot
+be secured from physical access.
 
 Secure Boot
 ~~~~~~~~~~~

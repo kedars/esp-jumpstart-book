@@ -59,7 +59,7 @@ You will require the following to get started:
 -  A Development host setup (Windows, Linux or Mac) that will be used
    for development.
 
-For ESP8266: An ESP32 development kit: ESP8266-DevKit-C
+**For ESP8266:** An ESP8266 development kit: ESP8266-DevKit-C
 https://www.espressif.com/products/hardware/esp8266ex/overview/
 available through your closest store. You could also use any other
 ESP8266 development board if you already have one.

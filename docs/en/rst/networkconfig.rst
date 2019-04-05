@@ -104,9 +104,9 @@ directory of esp-jumpstart for trying this out.
 -  Launch the application and follow the wizard as shown in the images
    below.
 
-For ESP8266: ESP8266 does not have a Bluetooth, thus the default
-provisioning mode is SoftAP. The app to be used for provisioning is
-**wifi-sec1**.
+**For ESP8266:** ESP8266 does not have a Bluetooth, thus the default
+provisioning mode is SoftAP. The app to be used for SoftAP provisioning
+is **wifi-sec1**.
 
 -  If all goes well, your device would be connected to your Home Wi-Fi
    network.
