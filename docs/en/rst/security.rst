@@ -63,6 +63,9 @@ Securing Physical Accesses
 Now let us look at some of the features of ESP32 that protect from
 physically tampering with the device.
 
+For ESP8266: ESP8266 cannot support these features and thus cannot be
+secured from physical access.
+
 Secure Boot
 ~~~~~~~~~~~
 
@@ -76,9 +79,9 @@ This is achieved by building a chain of trust from the hardware, to the
 software bootloader to the application firmware.
 
 .. figure:: ../../_static/secure_boot.png
-   :alt: Generating Factory Partition
+   :alt: Secure Boot
 
-   Generating Factory Partition
+   Secure Boot
 
 The process works as follows:
 

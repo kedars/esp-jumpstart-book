@@ -29,7 +29,7 @@ Host.
 ESP-IDF
 -------
 
-ESP-IDF is Espressif’s IoT Development Framework.
+ESP-IDF is Espressif’s IoT Development Framework for ESP32.
 
 -  ESP-IDF is a collection of libraries and header files that provides
    the core software components that are required to build any software
@@ -38,6 +38,12 @@ ESP-IDF is Espressif’s IoT Development Framework.
 -  ESP-IDF also provides tools and utilities that are required for
    typical developer and production usecases, like build, flash, debug
    and measure.
+
+For ESP8266: ESP8266\_RTOS\_SDK is Espressif’s IoT Development Framework
+for ESP8266. This is the single reference manual for ESP32 and ESP8266,
+all references to IDF, ESP-IDF are be mapped to ESP8266\_RTOS\_SDK in
+the context of ESP8266. The instructions for both the chips are common,
+the instructions unique to ESP8266 are under the “For ESP8266” section.
 
 Setting up IDF
 ~~~~~~~~~~~~~~
@@ -108,6 +114,15 @@ switch to that version of ESP-IDF.
     $ git checkout -b release/v3.2 remotes/origin/release/v3.2
     $ git submodule update --recursive
 
+For ESP8266: In the context of ESP8266, ESP-Jumpstart uses the commit
+93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Let us
+first switch to that version of ESP8266\_RTOS\_SDK.
+
+::
+
+    $ cd ESP8266\_RTOS\_SDK
+    $ git checkout -b release/jumpstart 93e3a3f5424e76def8afb3c41e625471490c056b
+
 Now we build our first, *Hello World*, application from ESP-Jumpstart
 and flash it on to our development board. You should be already familiar
 with most of the steps below.
@@ -174,6 +189,9 @@ The code is fairly simple. A few takeaways:
    the vTaskDelay function for putting the thread to sleep for 5
    seconds. Details of the FreeRTOS APIs are available at:
    https://www.freertos.org/a00106.html
+
+For ESP8266: ESP8266 has a single core, thus the FreeRTOS kernel and the
+main task run on the same core.
 
 Progress so far
 ---------------

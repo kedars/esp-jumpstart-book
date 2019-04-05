@@ -62,6 +62,8 @@ ota_1,    app,    ota_1,   ,      1600K,
 
 For ESP8266:
 The flash size in ESP8266 is 4MB, thus we use a minimal version of the partitions table. Given below is the partitions table used in the context of ESP8266.
+\begin{minted}{text}
+
 # Name,   Type, SubType, Offset,  Size, Flags
 # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
 nvs,      data, nvs,     0x9000,   0x4000,
