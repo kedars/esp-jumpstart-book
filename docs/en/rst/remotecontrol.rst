@@ -78,8 +78,8 @@ adding the following line into your application’s *component.mk* file.
 
 In the above example, the build system will make the file
 *cloud\_cfg/server.cert* be part of the firmware. The contents of this
-file are in the firmware’s address space and can be directly addressed
-as follows:
+file are in the firmware’s address space and can be directly accessed as
+follows:
 
 .. code:: c
 
@@ -151,21 +151,21 @@ To setup your AWS IoT example,
    extension to them. Please make sure that the downloaded files have
    names as expected below.)
 
-   -  The AWS CA Certificate to **5\_cloud/cloud\_cfg/server.cert**
+   -  The AWS CA Certificate to **5\_cloud/main/cloud\_cfg/server.cert**
 
-   -  The Device Private Key to **5\_cloud/cloud\_cfg/device.key**
+   -  The Device Private Key to **5\_cloud/main/cloud\_cfg/device.key**
 
-   -  The Device Certificate to **5\_cloud/cloud\_cfg/device.cert**
+   -  The Device Certificate to **5\_cloud/main/cloud\_cfg/device.cert**
 
-   -  The Device ID to **5\_cloud/cloud\_cfg/deviceid.txt**
+   -  The Device ID to **5\_cloud/main/cloud\_cfg/deviceid.txt**
 
-   -  The Endpoint to **5\_cloud/cloud\_cfg/endpoint.txt**
+   -  The Endpoint to **5\_cloud/main/cloud\_cfg/endpoint.txt**
 
 #. Build, flash and load the firmware on your device
 
-The will now connect to the AWS IoT cloud platform and will notify the
-cloud of any state changes. The firmware will also fetch any updates to
-the state from the cloud and apply them locally.
+The device will now connect to the AWS IoT cloud platform and will
+notify the cloud of any state changes. The firmware will also fetch any
+updates to the state from the cloud and apply them locally.
 
 Remote Control
 ~~~~~~~~~~~~~~
@@ -181,19 +181,22 @@ executing the following command on your Linux/Windows/Mac console:
 .. code:: console
 
 
-    curl --tlsv1.2 --cert /work/device.cert \
-           --key /work/device.key   \
-           https://a3orti3lw2padm-ats.iot.us-east-1.amazonaws.com:8443/things/<contents of deviceid.txt file>/shadow \ 
+    curl --tlsv1.2 --cert cloud_cfg/device.cert \
+           --key cloud_cfg/device.key   \
+           https://a3orti3lw2padm-ats.iot.us-east-1.amazonaws.com:8443/things/<contents-of-deviceid.txt-file>/shadow \ 
            | python -mjson.tool
-
-AWS expects that access to a device state is only granted to entities
-that are authorised to do so. Hence in the command above, we use the
-*device.cert* and *device.key*, which are the same files that we have
-configured to be in the firmware. This ensures that we can access the
-device’s state.
 
 In the above command, please copy paste the contents of the deviceid.txt
 file between *things* and *shadow*.
+
+**Note:** AWS expects that access to a device state is only granted to
+entities that are authorised to do so. Hence in the command above, we
+use the *device.cert* and *device.key*, which are the same files that we
+have configured to be in the firmware. This ensures that we are
+authorised to access the device’s state. In the production scenario, you
+must create separate authentication keys in the cloud for clients like
+this curl instance or phone applications, to access/modify the device
+state.
 
 The device state can be modified as:
 
@@ -201,9 +204,9 @@ The device state can be modified as:
 
 
     curl -d '{"state":{"desired":{"output":false}}}' \ 
-         --tlsv1.2 --cert /work/device.cert \ 
-         --key /work/device.key \ 
-         https://a3orti3lw2padm-ats.iot.us-east-1.amazonaws.com:8443/things/<contents of deviceid.txt file>/shadow \
+         --tlsv1.2 --cert cloud_cfg/device.cert \ 
+         --key cloud_cfg/device.key \ 
+         https://a3orti3lw2padm-ats.iot.us-east-1.amazonaws.com:8443/things/<contents-of-deviceid.txt-file>/shadow \
          | python -mjson.tool
 
 This cURL command will generate an HTTP POST request, and sends the JSON
@@ -229,11 +232,11 @@ respectively.
 
 The AWS IoT requires 3 files to be embedded within your firmware:
 
--  The AWS CA Certificate **5\_cloud/cloud\_cfg/server.cert**
+-  The AWS CA Certificate **5\_cloud/main/cloud\_cfg/server.cert**
 
--  The Device Private Key **5\_cloud/cloud\_cfg/device.key**
+-  The Device Private Key **5\_cloud/main/cloud\_cfg/device.key**
 
--  The Device Certificate **5\_cloud/cloud\_cfg/device.cert**
+-  The Device Certificate **5\_cloud/main/cloud\_cfg/device.cert**
 
 The application uses the mechanism as shown in Section
 :ref:`sec_embedding\_files` for embedding this within the firmware.

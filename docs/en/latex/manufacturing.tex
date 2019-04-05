@@ -49,7 +49,7 @@ Now we are good to go from the firmware perspective. But we still need to identi
     \label{fig:gen_fac_part}
 \end{figure}
 
-The utility \textit{idf/nvs\_flash/nvs\_partition\_generator/nvs\_partition\_gen.py} is used to generate an NVS image on the development host. This image can then be written to the flash into the location of the \textit{fctry} partition.
+The utility \textit{components/nvs\_flash/nvs\_partition\_generator/nvs\_partition\_gen.py} is used to generate an NVS image on the development host. This image can then be written to the flash into the location of the \textit{fctry} partition.
 
 This utility accepts a CSV file, and generates the image of an NVS partition from it. This CSV file stores the information about the key-value pairs that will be part of the generated NVS partition. At a factory, hundreds of thousands of these NVS partition images will be generated, one per device being manufactured, and then written to the respective devices uniquely.
 
@@ -65,6 +65,7 @@ The my\_mfg.bin file is the NVS partition data that can now be programmed into t
 \begin{minted}{bash}
 $ /path/to/idf/components/esptool_py/esptool/esptool.py -port /dev/cu.SLAB_USBtoUART write_flash 0x340000 device-164589345735.bin
 \end{minted}
+You may have to replace the \textit{/dev/cu.SLAB\_USBtoUART} with the correct device name that appears on your host setup.
 
 Now if you boot up your firmware, it will work exactly as the firmware in the previous Chapter. But in this case, the firmware image itself is independent of the unique settings per device. 
 

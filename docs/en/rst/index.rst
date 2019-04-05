@@ -1,11 +1,11 @@
 ESP-Jumpstart
 =============
 
-.. role:: testks
-   :class: testks
+.. role:: bolditalics
+   :class: bolditalics
           
 
-| **Building Products with ESP32** :testks:`fast`: Jumpstart from concept to production
+| **Building Products with ESP32** :bolditalics:`fast`: Jumpstart from concept to production
 
 +------------------+
 | |Jumpstart Now|_ |
