@@ -86,21 +86,6 @@ The partitions file that is used for this example is shown below:
     ota_0,    app,    ota_0,   ,      1600K,
     ota_1,    app,    ota_1,   ,      1600K,
 
-**For ESP8266:** The flash size in ESP8266 is 4MB, thus we use a minimal
-version of the partitions table. Given below is the partitions table
-used in the context of ESP8266.
-
-.. code:: text
-
-            # Name,   Type, SubType, Offset,  Size, Flags
-            # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
-            nvs,      data, nvs,     0x9000,   0x4000,
-            otadata,  data, ota,     0xd000,   0x2000,
-            phy_init, data, phy,     0xf000,   0x1000,
-            ota_0,    app,  ota_0,   0x10000,  0xf000,
-            ota_1,    app,  ota_1,   0x110000, 0xf000,
-        
-
 The above partitions file instructs the IDF to create partitions: NVS,
 OTA-Data, OTA 0 and OTA 1, and it also specifies the sizes for each of
 these.
@@ -116,6 +101,23 @@ But should you wish to use a different partitions file, or update the
 offset of the primary firmware, you should modify this setting. This can
 be done by executing the *make menuconfig* command, and then configuring
 correct options in *menuconfig* -> *Partition Table*.
+
+For ESP8266 Users
+~~~~~~~~~~~~~~~~~
+
+| The flash size in ESP8266 is 4MB, thus we use a minimal version of the partitions table. 
+| Given below is the partitions table used in the context of ESP8266.
+
+.. code:: text
+
+            # Name,   Type, SubType, Offset,  Size, Flags
+            # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
+            nvs,      data, nvs,     0x9000,   0x4000,
+            otadata,  data, ota,     0xd000,   0x2000,
+            phy_init, data, phy,     0xf000,   0x1000,
+            ota_0,    app,  ota_0,   0x10000,  0xf000,
+            ota_1,    app,  ota_1,   0x110000, 0xf000,
+        
 
 The Code
 --------
