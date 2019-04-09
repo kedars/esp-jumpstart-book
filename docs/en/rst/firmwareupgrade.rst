@@ -105,7 +105,7 @@ correct options in *menuconfig* -> *Partition Table*.
 .. _sec_for\_esp8266\_users:
 
 For ESP8266 Users
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 The flash size in ESP8266 is 4MB, thus we use
 a minimal version of the partitions table. Given below is the partitions

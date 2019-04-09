@@ -112,10 +112,8 @@ directory of esp-jumpstart for trying this out.
    Wi-Fi network that is configured. This is the end product experience
    that we want.
 
-.. _sec_for\_esp8266\_users:
-
 For ESP8266 Users
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 ESP8266 does not have a Bluetooth, thus the
 default provisioning mode is SoftAP. The app to be used for SoftAP
