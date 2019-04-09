@@ -73,7 +73,7 @@ You will require the following to get started:
 
 -  ESP8266\_RTOS\_SDK is Espressif’s IoT Development Framework for
    ESP8266. The instructions for ESP32 and ESP8266 are common unless
-   specified under the “For ESP8266 Users” section.
+   specified under the **For ESP8266 Users** section.
 
 -  All references to IDF, ESP-IDF are to be mapped to ESP8266\_RTOS\_SDK
    in the context of ESP8266.
