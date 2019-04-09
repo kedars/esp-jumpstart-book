@@ -59,11 +59,6 @@ You may refer to the \textit{4\_network\_config/} directory of esp-jumpstart for
     \item Launch the application and follow the wizard as shown in the images below.
 \end{itemize}
 
-\begin{tcolorbox}
-    \textbf{For ESP8266:}\linebreak
-    ESP8266 does not have a Bluetooth, thus the default provisioning mode is SoftAP. The app to be used for SoftAP provisioning is \textbf{wifi-sec1}.
-\end{tcolorbox}
-
 \ksnotebox{As of now, only Android users can try the application out. For iOS users, we are working on enabling an application with \textit{TestFlight} soon.}
 
 
@@ -72,7 +67,9 @@ You may refer to the \textit{4\_network\_config/} directory of esp-jumpstart for
     \item If you now reboot the device, it will NOT enter the network-configuration mode. Instead it will go and connect to the Wi-Fi network that is configured. This is the end product experience that we want.
 \end{itemize}
 
- 
+\subsection{For ESP8266 Users}\index{For ESP8266 Users}\label{sec:for_esp8266_users}
+ESP8266 does not have a Bluetooth, thus the default provisioning mode is SoftAP. The app to be used for SoftAP provisioning is \textbf{wifi-sec1}.
+
 \section{Unified Provisioning}\index{Unified Provisioning}\label{sec:unified_prov}
 
 Espressif provides a \textbf{Unified Provisioning} module for assisting you with your network configuration. When this module is invoked from your firmware executable, the module takes care of managing all the state transitions (like starting/stopping the softAP/BLE interface, exchanging the credentials securely, storing them for subsequent use etc).

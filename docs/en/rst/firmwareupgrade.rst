@@ -102,22 +102,24 @@ offset of the primary firmware, you should modify this setting. This can
 be done by executing the *make menuconfig* command, and then configuring
 correct options in *menuconfig* -> *Partition Table*.
 
+.. _sec_for\_esp8266\_users:
+
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-| The flash size in ESP8266 is 4MB, thus we use a minimal version of the partitions table. 
-| Given below is the partitions table used in the context of ESP8266.
+The flash size in ESP8266 is 4MB, thus we use
+a minimal version of the partitions table. Given below is the partitions
+table used in the context of ESP8266.
 
 .. code:: text
 
-            # Name,   Type, SubType, Offset,  Size, Flags
-            # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
-            nvs,      data, nvs,     0x9000,   0x4000,
-            otadata,  data, ota,     0xd000,   0x2000,
-            phy_init, data, phy,     0xf000,   0x1000,
-            ota_0,    app,  ota_0,   0x10000,  0xf000,
-            ota_1,    app,  ota_1,   0x110000, 0xf000,
-        
+        # Name,   Type, SubType, Offset,  Size, Flags
+        # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
+        nvs,      data, nvs,     0x9000,   0x4000,
+        otadata,  data, ota,     0xd000,   0x2000,
+        phy_init, data, phy,     0xf000,   0x1000,
+        ota_0,    app,  ota_0,   0x10000,  0xf000,
+        ota_1,    app,  ota_1,   0x110000, 0xf000,
 
 The Code
 --------

@@ -63,6 +63,14 @@ Securing Physical Accesses
 Now let us look at some of the features of ESP32 that protect from
 physically tampering with the device.
 
+.. _sec_for\_esp8266\_users:
+
+For ESP8266 Users
+~~~~~~~~~~~~~~~~~
+
+ESP8266 cannot support these features and thus
+cannot be secured from physical access.
+
 Secure Boot
 ~~~~~~~~~~~
 
@@ -179,7 +187,3 @@ The process works as follows: The process works as follows:
 For more information about using NVS encryption, you can head over to
 the additional documentation at
 https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/storage/nvs_flash.html#nvs-encryption.
-
-For ESP8266 Users
-~~~~~~~~~~~~~~~~~ 
-ESP8266 cannot support these features and thus cannot be secured from physical access.

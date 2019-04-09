@@ -39,13 +39,6 @@ ESP-IDF is Espressif’s IoT Development Framework for ESP32.
    typical developer and production usecases, like build, flash, debug
    and measure.
 
-For ESP8266 Users 
-~~~~~~~~~~~~~~~~~
-
-| ESP8266\_RTOS\_SDK is Espressif’s IoT Development Framework for ESP8266. This is a common reference manual for ESP32 and ESP8266.
-| The instructions exclusively applicable to ESP8266 are under the “For ESP8266 Users” sections.
-| All references to IDF, ESP-IDF are be mapped to ESP8266\_RTOS\_SDK in the context of ESP8266.
-
 Setting up IDF
 ~~~~~~~~~~~~~~
 
@@ -133,15 +126,19 @@ is successful, it will write the generated firmware to the device.
 Once the flashing is successful, the device will reset and you will see
 the console output from this firmware.
 
+.. _sec_for\_esp8266\_users:
+
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-| In the context of ESP8266, ESP-Jumpstart uses the commit 93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK.
-| Let us first switch to that version of ESP8266\_RTOS\_SDK.
+In the context of ESP8266, ESP-Jumpstart uses
+the commit 93e3a3f5424e76def8afb3c41e625471490c056b of
+ESP8266\_RTOS\_SDK. Let us first switch to that version of
+ESP8266\_RTOS\_SDK.
 
 ::
 
-    $ cd ESP8266\_RTOS\_SDK
+    $ cd ESP8266_RTOS_SDK
     $ git checkout -b release/jumpstart 93e3a3f5424e76def8afb3c41e625471490c056b
 
 The Code
@@ -193,10 +190,13 @@ The code is fairly simple. A few takeaways:
    seconds. Details of the FreeRTOS APIs are available at:
    https://www.freertos.org/a00106.html
 
-For ESP8266 Users 
+.. _sec_for\_esp8266\_users:
+
+For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
-ESP8266 has a single core, thus the FreeRTOS kernel and
-the main task run on the same core.
+
+ESP8266 has a single core, thus the FreeRTOS
+kernel and the main task run on the same core.
 
 Progress so far
 ---------------
