@@ -68,8 +68,8 @@ physically tampering with the device.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-ESP8266 cannot support these features and thus
-cannot be secured from physical access.
+ESP8266 does not support the following
+features and thus cannot be secured from physical access.
 
 Secure Boot
 ~~~~~~~~~~~

@@ -131,10 +131,9 @@ the console output from this firmware.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-In the context of ESP8266, ESP-Jumpstart uses
-the commit 93e3a3f5424e76def8afb3c41e625471490c056b of
-ESP8266\_RTOS\_SDK. Let us first switch to that version of
-ESP8266\_RTOS\_SDK.
+ESP-Jumpstart uses the commit
+93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Let us
+first switch to that version of ESP8266\_RTOS\_SDK.
 
 ::
 
