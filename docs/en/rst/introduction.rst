@@ -59,8 +59,10 @@ You will require the following to get started:
 -  A Development host setup (Windows, Linux or Mac) that will be used
    for development.
 
+.. _sec_for\_esp8266\_users:
+
 For ESP8266 Users
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 You will require the following to get started:
 

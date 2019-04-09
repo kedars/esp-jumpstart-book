@@ -126,8 +126,10 @@ is successful, it will write the generated firmware to the device.
 Once the flashing is successful, the device will reset and you will see
 the console output from this firmware.
 
+.. _sec_for\_esp8266\_users:
+
 For ESP8266 Users
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 ESP-Jumpstart uses the commit
 93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Let us
@@ -187,8 +189,10 @@ The code is fairly simple. A few takeaways:
    seconds. Details of the FreeRTOS APIs are available at:
    https://www.freertos.org/a00106.html
 
+.. _sec_for\_esp8266\_users:
+
 For ESP8266 Users
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 ESP8266 has a single core, thus the FreeRTOS
 kernel and the main task run on the same core.
