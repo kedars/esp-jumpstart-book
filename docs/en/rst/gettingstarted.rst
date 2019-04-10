@@ -188,14 +188,7 @@ The code is fairly simple. A few takeaways:
    the vTaskDelay function for putting the thread to sleep for 5
    seconds. Details of the FreeRTOS APIs are available at:
    https://www.freertos.org/a00106.html
-
-.. _sec_for\_esp8266\_users:
-
-For ESP8266 Users
-~~~~~~~~~~~~~~~~~
-
-ESP8266 has a single core, thus the FreeRTOS
-kernel and the main task run on the same core.
+   
 
 Progress so far
 ---------------
