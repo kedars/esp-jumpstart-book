@@ -132,8 +132,7 @@ For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
 ESP-Jumpstart uses the commit
-93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Let us
-first switch to that version of ESP8266\_RTOS\_SDK.
+93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Switch to this version of ESP8266\_RTOS\_SDK using the following commands.
 
 ::
 
@@ -188,7 +187,6 @@ The code is fairly simple. A few takeaways:
    the vTaskDelay function for putting the thread to sleep for 5
    seconds. Details of the FreeRTOS APIs are available at:
    https://www.freertos.org/a00106.html
-   
 
 Progress so far
 ---------------

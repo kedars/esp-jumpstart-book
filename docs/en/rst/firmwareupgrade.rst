@@ -83,8 +83,8 @@ The partitions file that is used for this example is shown below:
     nvs,      data, nvs,     ,        0x6000,
     otadata,  data, ota,     ,        0x2000,
     phy_init, data, phy,     ,        0x1000,
-    ota_0,    app,    ota_0,   ,      1600K,
-    ota_1,    app,    ota_1,   ,      1600K,
+    ota_0,    app,  ota_0,   ,      1600K,
+    ota_1,    app,  ota_1,   ,      1600K,
 
 The above partitions file instructs the IDF to create partitions: NVS,
 OTA-Data, OTA 0 and OTA 1, and it also specifies the sizes for each of
