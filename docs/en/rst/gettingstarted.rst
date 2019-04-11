@@ -132,12 +132,14 @@ For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
 ESP-Jumpstart uses the commit
-93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Switch to this version of ESP8266\_RTOS\_SDK using the following commands.
+93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK and platform/esp8266 of esp-jumpstart. Switch to these versions using the following commands.
 
 ::
 
     $ cd ESP8266_RTOS_SDK
     $ git checkout -b release/jumpstart 93e3a3f5424e76def8afb3c41e625471490c056b
+    $ cd esp-jumpstart
+    $ git checkout -b platform/esp8266 origin/platform/esp8266
 
 The Code
 --------

@@ -93,11 +93,13 @@ This will then build the entire SDK and the application. Once the build is succe
 Once the flashing is successful, the device will reset and you will see the console output from this firmware.
 
 \subsection{For ESP8266 Users}\index{For ESP8266 Users}\label{sec:for_esp8266_users}
-ESP-Jumpstart uses the commit 93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK. Switch to this version of ESP8266\_RTOS\_SDK using the following commands.
+ESP-Jumpstart uses the commit 93e3a3f5424e76def8afb3c41e625471490c056b of ESP8266\_RTOS\_SDK and platform/esp8266 of esp-jumpstart. Switch to these versions using the following commands.
 
 \begin{verbatim}
 $ cd ESP8266_RTOS_SDK
 $ git checkout -b release/jumpstart 93e3a3f5424e76def8afb3c41e625471490c056b
+$ cd esp-jumpstart
+$ git checkout -b platform/esp8266 origin/platform/esp8266
 \end{verbatim}
 
 \section{The Code}\index{The Code}
