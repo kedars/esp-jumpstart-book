@@ -131,7 +131,9 @@ the console output from this firmware.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-Please make sure that the IDF\_PATH is set to the path of ESP8266\_RTOS\_SDK. ESP8266 uses the branch platform/esp8266 of esp-jumpstart. Switch to this branch using the following command.
+Please make sure that the IDF\_PATH is set to
+the path of ESP8266\_RTOS\_SDK. ESP8266 uses the branch platform/esp8266
+of esp-jumpstart. Switch to this branch using the following command.
 
 ::
 

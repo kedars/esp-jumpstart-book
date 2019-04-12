@@ -79,7 +79,8 @@ The partitions file that is used for this example is shown below:
 
 
     # Name,   Type, SubType, Offset,  Size, Flags
-    # Note: if you change the phy_init or app partition offset, make sure to change the offset in Kconfig.projbuild
+    # Note: if you change the phy_init or app partition offset
+    # make sure to change the offset in Kconfig.projbuild
     nvs,      data, nvs,     ,        0x6000,
     otadata,  data, ota,     ,        0x2000,
     phy_init, data, phy,     ,        0x1000,
@@ -107,7 +108,8 @@ correct options in *menuconfig* -> *Partition Table*.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-If your ESP8266 board has a smaller 2MB flash, please use this partition table.
+If your ESP8266 board has a smaller 2MB flash,
+please use this partition table.
 
 .. code:: text
 
