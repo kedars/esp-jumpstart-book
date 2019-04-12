@@ -131,7 +131,7 @@ the console output from this firmware.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-ESP-Jumpstart uses the branch platform/esp8266 of esp-jumpstart. Switch to this version using the following command.
+Please make sure that the IDF\_PATH is set to the path of ESP8266\_RTOS\_SDK. ESP-Jumpstart uses the branch platform/esp8266 of esp-jumpstart. Switch to this version using the following command.
 
 ::
 
