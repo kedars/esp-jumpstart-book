@@ -117,9 +117,9 @@ directory of esp-jumpstart for trying this out.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-ESP8266 does not have a Bluetooth, thus the
-default provisioning mode is SoftAP. The app to be used for SoftAP
-provisioning is **wifi-sec1**.
+ESP8266 does not have a Bluetooth, thus the default provisioning mode is 
+SoftAP. The app to be used for SoftAP provisioning is **wifi-sec1**.
+
 
 .. _sec_unified\_prov:
 
