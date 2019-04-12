@@ -107,9 +107,7 @@ correct options in *menuconfig* -> *Partition Table*.
 For ESP8266 Users
 ~~~~~~~~~~~~~~~~~
 
-The flash size in ESP8266 is 4MB, thus we use
-a minimal version of the partitions table. Given below is the partitions
-table used in the context of ESP8266.
+If your ESP8266 board has a smaller 2MB flash, please use this partition table.
 
 .. code:: text
 
@@ -118,8 +116,8 @@ table used in the context of ESP8266.
         nvs,      data, nvs,     0x9000,   0x4000,
         otadata,  data, ota,     0xd000,   0x2000,
         phy_init, data, phy,     0xf000,   0x1000,
-        ota_0,    app,  ota_0,   0x10000,  0xf000,
-        ota_1,    app,  ota_1,   0x110000, 0xf000,
+        ota_0,    app,  ota_0,   0x10000,  0xC5000,
+        ota_1,    app,  ota_1,   0x110000, 0xC5000,
 
 The Code
 --------
